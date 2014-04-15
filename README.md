@@ -1,14 +1,14 @@
 FSK-iOS7
 ========
 
-FSK Dependencies for iOS7 Development Non-ARC.
+Dependencies for iOS7 Development Non-ARC, using [Sofmodem Arduino library](https://code.google.com/p/arms22/downloads/detail?name=SoftModem-005.zip&can=2&q=), with FSK communication.
 
 =====
 
 How to use
 ====
 
-Currently, the source code of the SoftModem is not made as a framework. If you want to use SoftModem in your project, the source code related to the SoftModem must be copied from the source code of the SoftModemTerminal. The following is the list of source code related to SoftModem. Please copy these to the project source code.
+This libraries have a propouse work with an Arduino using a Sofmodem Shield* to communicate with iOS using FSK. Currently, the source code of the SoftModem is not made as a framework. If you want to use SoftModem in your project, the source code related to the SoftModem must be copied from the source code of the SoftModemTerminal. The following is the list of source code related to SoftModem. Please copy these to the project source code.
 
 ```c
 * AudioQueueObject.h
@@ -88,3 +88,15 @@ Sending data is much easier than receiving data. FSKSerialGenerator class's writ
 ```objectivec
 [Generator writeByte: 0xff];
 ```
+
+Links and Credits
+=====
+[arms22](http://arms22.blog91.fc2.com/) - creator of Softmodem hardware, libraries for Arduino and ARC version lib for iOS.
+
+[Arduino Libraries](https://code.google.com/p/arms22/downloads/detail?name=SoftModem-005.zip&can=2&q=)
+
+[iOS 4/5 ARC version]()
+
+[FSK Wikipedia]()
+
+
