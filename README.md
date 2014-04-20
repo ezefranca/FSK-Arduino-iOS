@@ -10,7 +10,7 @@ How to use
 
 This libraries have a propouse work with an Arduino using a Sofmodem Shield* to communicate with iOS using FSK. Currently, the source code of the SoftModem is not made as a framework. If you want to use SoftModem in your project, the source code related to the SoftModem must be copied from the source code of the SoftModemTerminal. The following is the list of source code related to SoftModem. Please copy these to the project source code.
 
-```c
+```objectivec
 * AudioQueueObject.h
 * AudioQueueObject.m
 * AudioSignalAnalyzer.h
@@ -32,51 +32,82 @@ This libraries have a propouse work with an Arduino using a Sofmodem Shield* to 
 
 SoftModem uses the following two framework for audio input and output. Please add them to your project.
 
-```
+![Image](https://raw.githubusercontent.com/ezefranca/FSK-Arduino-iOS7/master/FSK-Demo/FSK-Demo/framework.png)
+
+```objectivec
 * AudioToolbox.framework
 * AVFoundation.framework
 ```
+
+
 Initialization
 =====
 
 First, set the category of application with AVAudioSession class. To do voice recording and playback, AVAudioSessionCategoryPlayAndRecord need to be set.
 
 ```objectivec
-AVAudioSession * session = [AVAudioSession sharedInstance];
-session.delegate = self;
-[Session setCategory: AVAudioSessionCategoryPlayAndRecord error: nil];
-[Session setActive: YES error: nil];
+AVAudioSession *session = [AVAudioSession sharedInstance];   
+[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(interruption:) name:
+AVAudioSessionInterruptionNotification object:nil];
+
+[session setCategory:AVAudioSessionCategoryPlayAndRecord error:nil];
+[session setCategory:AVAudioSessionCategoryPlayback error:nil];
+[session setActive:YES error:nil];
 ```
+
+interruption selector method
+
+```objectivec
+- (void) interruption:(NSNotification*)notification
+{
+    NSDictionary *interuptionDict = notification.userInfo;
+    NSUInteger interuptionType = (NSUInteger)[interuptionDict valueForKey:AVAudioSessionInterruptionTypeKey];
+    
+    if (interuptionType == AVAudioSessionInterruptionTypeBegan)
+        [self beginInterruption];
+#if __CC_PLATFORM_IOS >= 40000
+    else if (interuptionType == AVAudioSessionInterruptionTypeEnded)
+        [self endInterruptionWithFlags:(NSUInteger)[interuptionDict valueForKey:AVAudioSessionInterruptionOptionKey]];
+#else
+    else if (interuptionType == AVAudioSessionInterruptionTypeEnded)
+        [self endInterruption];
+#endif
+}
+```
+
 Next, for analysis of the voice, make instance of class AudioSignalAnalyzer, FSKRecognizer and AudioSignalAnalyzer parses the input waveform from the microphone to detect the falling and rising edge of the waveform. FSKRecognizer restores the data bits based on the results of the analysis of AudioSignalAnalyzer.
 
 ```objectivec
-recognizer = [[FSKRecognizer alloc] init];
-analyzer = [[AudioSignalAnalyzer alloc] init];
-[Analyzer addRecognizer: recognizer]; // set recognizer to analyzer
-[analyzer record]; // start analyzing
+        recognizer = [[FSKRecognizer alloc] init];     
+        [recognizer addReceiver:self];
+        analyzer = [[AudioSignalAnalyzer alloc] init]; 
+        [analyzer addRecognizer:recognizer];
 ```
 
 Then create an instance of a class FSKSerialGenerator for sound output. FSKSerialGenerator converts the data bits to audio signal and output.
 
 ```objectivec
-generator = [[FSKSerialGenerator alloc] init];
-[Generator play]; // audio output starts
+        generator = [[FSKSerialGenerator alloc] init]; 
+        [generator play];
 ````
 Receiving
 =====
 
-Register the class that implements the CharReceiver protocol to the FSKRecognizer class.
+Register the class that implements the CharReceiver protocol to the FSKRecognizer class, and AVAudioSessionDelegate.
+
 ```objectivec
-@ Interface MainViewController: UIViewController <CharReceiver>
+@interface YourClass : NSObject <AVAudioSessionDelegate, CharReceiver>
 ````
 Register FSKRecognizer class at initialization.
+
 ```objectivec
-MainViewController * mainViewController;
-[Recognizer addReceiver: mainViewController];
+YourClass *yourClassInstance;
+[recognizer addReceiver: yourClassInstance];
 ```
 receivedChar: method is called　when one byte of data is received.
+
 ```objectivec
-- (Void) receivedChar: (char) input
+- (void) receivedChar: (char) input
 {
      // Receive handling
 }
@@ -85,8 +116,9 @@ Sending
 =====
 
 Sending data is much easier than receiving data. FSKSerialGenerator class's writeByte: method to sends a single byte.
+
 ```objectivec
-[Generator writeByte: 0xff];
+[generator writeByte: 0xff];
 ```
 
 Links and Credits
@@ -95,8 +127,8 @@ Links and Credits
 
 [Arduino Libraries](https://code.google.com/p/arms22/downloads/detail?name=SoftModem-005.zip&can=2&q=)
 
-[iOS 4/5 ARC version]()
+[iOS 4/5 ARC version](https://github.com/9labco/IR-Remote)
 
-[FSK Wikipedia]()
+[FSK Wikipedia](http://en.wikipedia.org/wiki/Frequency-shift_keying)
 
 
