@@ -32,6 +32,7 @@
 		F7C3C3F4190395C800B9FFA3 /* AudioDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C3C3F3190395C800B9FFA3 /* AudioDemo.m */; };
 		F7C3C3F819039C6F00B9FFA3 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C3C3F519039C6F00B9FFA3 /* AudioToolbox.framework */; };
 		F7C3C3FA19039C6F00B9FFA3 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C3C3F719039C6F00B9FFA3 /* CoreAudio.framework */; };
+		F7C3C40D1904306300B9FFA3 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C3C40C1904306300B9FFA3 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,7 @@
 		F7C3C3F519039C6F00B9FFA3 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		F7C3C3F619039C6F00B9FFA3 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
 		F7C3C3F719039C6F00B9FFA3 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		F7C3C40C1904306300B9FFA3 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7C3C40D1904306300B9FFA3 /* AVFoundation.framework in Frameworks */,
 				F7C3C3F819039C6F00B9FFA3 /* AudioToolbox.framework in Frameworks */,
 				F7C3C3FA19039C6F00B9FFA3 /* CoreAudio.framework in Frameworks */,
 				F7C3C39F1903952700B9FFA3 /* CoreGraphics.framework in Frameworks */,
@@ -141,6 +144,7 @@
 		F7C3C39B1903952700B9FFA3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F7C3C40C1904306300B9FFA3 /* AVFoundation.framework */,
 				F7C3C3F519039C6F00B9FFA3 /* AudioToolbox.framework */,
 				F7C3C3F619039C6F00B9FFA3 /* AudioUnit.framework */,
 				F7C3C3F719039C6F00B9FFA3 /* CoreAudio.framework */,
@@ -565,6 +569,7 @@
 				F7C3C3D01903952700B9FFA3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F7C3C3D11903952700B9FFA3 /* Build configuration list for PBXNativeTarget "FSK-DemoTests" */ = {
 			isa = XCConfigurationList;
@@ -573,6 +578,7 @@
 				F7C3C3D31903952700B9FFA3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
