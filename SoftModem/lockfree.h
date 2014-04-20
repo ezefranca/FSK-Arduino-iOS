@@ -13,7 +13,7 @@
 // to ensure thread safety. Based on the C# examples from a series of articles
 // by Julian M. Bucknall. The first article can be found here:
 //
-//     http://www.boyet.com/Articles/LockfreeStack.html
+// http://www.boyet.com/Articles/LockfreeStack.html
 
 namespace lock_free
 {
@@ -24,10 +24,10 @@ namespace lock_free
 	{
 		node<T>* volatile next;
 		T data;
-		
+
 		node():next(NULL),data(){}
 	};
-		
+
 	// This is the classic atomic compare-and-swap operation. Pseudocode:
 	// if (dest == oldValue){
 	//     dest = newValue;
@@ -43,7 +43,7 @@ namespace lock_free
 #endif
 #ifdef __APPLE__
 		return OSAtomicCompareAndSwapPtr(oldValue, newValue, (void* volatile *)&dest);
-#endif	
+#endif
 	}
 
 
@@ -57,7 +57,7 @@ namespace lock_free
 		{
 			head = NULL;
 		}
-		
+
 		bool empty() const
 		{
 			return head;
@@ -104,19 +104,19 @@ namespace lock_free
 		{
 			return tail == dummy;
 		}
-		
+
 	protected:
 		// Add a node to the tail of the list
 		void node_add(node<T>* pNewTail)
 		{
 			node<T> *pOldTail = nullptr, *pOldNext;
 
-			// Loop until we have managed to update the tail's Next link 
+			// Loop until we have managed to update the tail's Next link
 			// to point to our new node
 			bool done = false;
 			while(!done)
 			{
-				pOldTail = tail;         
+				pOldTail = tail;
 				pOldNext = pOldTail->next;
 
 				// A lot could have changed between those statements, so check
@@ -215,7 +215,7 @@ namespace lock_free
 	class cached_node_allocator: public node_stack<T>
 	{
 		using node_stack<T>::node_remove;
-		
+
 	public:
 		cached_node_allocator(int nPreAllocate = 0)
 		{
@@ -264,7 +264,7 @@ namespace lock_free
 	class collection_impl: public impl_base<T>
 	{
 		using impl_base<T>::node_remove;
-		
+
 	public:
 		collection_impl(Allocator* pAlloc = NULL)
 		{
@@ -279,7 +279,7 @@ namespace lock_free
 			ownedAllocator = true;
 			alloc = new Allocator(preallocated);
 		}
-		
+
 		~collection_impl(void)
 		{
 			// Remove all nodes from the list
@@ -337,7 +337,7 @@ namespace lock_free
 		stack(Allocator* pAlloc = NULL): collection_impl<node_stack, T, Allocator>(pAlloc){}
 
 		stack(int preallocated): collection_impl<node_stack, T, Allocator>(preallocated){}
-	
+
 		// Push a data item onto the top of the stack
 		void push(T data)
 		{

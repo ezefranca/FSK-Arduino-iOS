@@ -5,6 +5,7 @@
 //  Created by George Dean on 1/7/09.
 //  Copyright 2009 Perceptive Development. All rights reserved.
 //
+//  Edited by Ezequiel Franca on 20/04/14
 
 #import "FSKModemConfig.h"
 #import "FSKSerialGenerator.h"
@@ -61,7 +62,7 @@ SAMPLE sineTable[SINE_TABLE_LENGTH];
 			sineTable[i] = (SAMPLE)(sin(i * 2 * 3.14159 / SINE_TABLE_LENGTH) * SAMPLE_MAX);
 		}
 	}
-	
+
 	return self;
 }
 
@@ -75,7 +76,7 @@ SAMPLE sineTable[SINE_TABLE_LENGTH];
 	audioFormat.mBitsPerChannel		= BITS_PER_CHANNEL;
 	audioFormat.mBytesPerPacket		= BYTES_PER_FRAME;
 	audioFormat.mBytesPerFrame		= BYTES_PER_FRAME;
-	
+
 	bufferByteSize = 0x400;
 }
 
@@ -119,10 +120,10 @@ SAMPLE sineTable[SINE_TABLE_LENGTH];
 {
 	SAMPLE* sample = (SAMPLE*)buffer;
 	BOOL underflow = NO;
-	
+
 	if(!bitCount)
 		underflow = ![self getNextByte];
-	
+
 	for(int i=0; i<bufferByteSize; i += BYTES_PER_FRAME, sample++)
 	{
 		if(nsBitProgress >= BIT_PERIOD)

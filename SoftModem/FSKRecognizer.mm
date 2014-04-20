@@ -6,6 +6,7 @@
 //  Created by George Dean on 12/22/08.
 //  Copyright 2008 Perceptive Development. All rights reserved.
 //
+//  Edited by Ezequiel Franca on 20/04/14
 
 #import "FSKModemConfig.h"
 #import "FSKRecognizer.h"
@@ -35,7 +36,7 @@
 		byteQueue = new FSKByteQueue();
 		[self reset];
 	}
-	
+
 	return self;
 }
 
@@ -92,6 +93,12 @@
 				bitPosition = 0;
 			}
 			break;
+        case FSKSuccess:
+            NSLog(@"FSKSucess");
+            break;
+        case FSKFail:
+            NSLog(@"FSKFail");
+            break;
 	}
 	state = newState;
 }
@@ -102,22 +109,22 @@
 		halfWaveHistory[i+1] = halfWaveHistory[i];
 	}
 	halfWaveHistory[0] = width;
-	
+
 	unsigned waveSum = 0;
 	for(int i=0; i<FSK_SMOOTH; ++i)
 	{
 		waveSum += halfWaveHistory[i] * (FSK_SMOOTH - i);
 	}
-	
+
 	BOOL high = (waveSum < DISCRIMINATOR);
 	unsigned avgWidth = waveSum / SMOOTHER_COUNT;
-	
+
 	recentWidth += width;
 	recentAvrWidth += avgWidth;
-	
+
 //	NSLog(@"high %d, width %u(avg %u), low %u, high %u, w %u,a %u",high, width/1000, avgWidth/1000, recentLows/1000, recentHighs/1000,recentWidth/1000,recentAvrWidth/1000);
-	
-	
+
+
 	if (state == FSKStart)
 	{
 		if(!high)
@@ -133,7 +140,7 @@
 				recentLows = recentHighs = 0;
 			}
 		}
-		
+
 		if(recentLows + recentHighs >= BIT_PERIOD)
 		{
 			[self freqRegion:recentLows high:FALSE];
@@ -156,22 +163,22 @@
 			recentHighs += avgWidth;
 		else
 			recentLows += avgWidth;
-		
+
 		if(recentLows + recentHighs >= BIT_PERIOD)
 		{
 			BOOL regionHigh = (recentHighs > recentLows);
 			[self freqRegion:regionHigh?recentHighs:recentLows high:regionHigh];
-			
+
 			recentWidth -= BIT_PERIOD;
 			recentAvrWidth -= BIT_PERIOD;
-			
+
 			if(state == FSKStart)
 			{
 				// The byte ended, reset the accumulators
 				recentLows = recentHighs = 0;
 				return;
 			}
-			
+
 			unsigned* matched = regionHigh?&recentHighs:&recentLows;
 			unsigned* unmatched = regionHigh?&recentLows:&recentHighs;
 			if(*matched < BIT_PERIOD)
@@ -184,8 +191,8 @@
 			}
 			if(high == regionHigh)
 				*unmatched = 0;
-		}		
-	}	
+		}
+	}
 }
 
 - (void) edge: (int)height width:(UInt64)nsWidth interval:(UInt64)nsInterval

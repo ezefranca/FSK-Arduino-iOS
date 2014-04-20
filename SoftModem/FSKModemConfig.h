@@ -1,10 +1,10 @@
-/*
- *  FSKModemConfig.h
- *
- *  Created by arms22 on 10/05/06.
- *  Copyright 2010 __MyCompanyName__. All rights reserved.
- *
- */
+//
+//  FSKModemConfig.h
+//
+//  Created by arms22 on 10/05/06.
+//  Copyright 2010 __MyCompanyName__. All rights reserved.
+//
+//  Edited by Ezequiel Franca on 20/04/14
 
 //#define FREQ_LOW  882
 //#define FREQ_HIGH 1764

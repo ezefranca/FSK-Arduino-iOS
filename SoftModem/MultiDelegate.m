@@ -17,7 +17,7 @@
 	{
 		proto = p;
 	}
-	
+
 	return self;
 }
 
@@ -32,13 +32,13 @@
 {
 	if([delegateSet count])
 		return [[delegateSet anyObject] methodSignatureForSelector:selector];
-	
+
 	if(proto)
 	{
 		struct objc_method_description desc = protocol_getMethodDescription(proto, selector, YES, YES);
 		return [NSMethodSignature signatureWithObjCTypes:desc.types];
 	}
-	
+
 	// return void-void signature by default
 	return nil;
     //return [self methodSignatureForSelector:@selector(void)];
@@ -51,5 +51,4 @@
 			[invocation invokeWithTarget:delegate];
 	}
 }
-
 @end

@@ -5,6 +5,7 @@
 //  Created by George Dean on 11/28/08.
 //  Copyright 2008 Perceptive Development. All rights reserved.
 //
+//  Edited by Ezequiel Franca on 20/04/14
 
 #import "AudioSignalAnalyzer.h"
 
@@ -30,14 +31,14 @@ static int analyze( SAMPLE *inputBuffer,
 	analyzerData *data = analyzer.pulseData;
 	SAMPLE *pSample = inputBuffer;
 	int lastFrame = data->lastFrame;
-	
+
 	unsigned idleInterval = data->plateauWidth + data->lastEdgeWidth + data->edgeWidth;
-	
+
 	for (long i=0; i < framesPerBuffer; i++, pSample++)
 	{
 		int thisFrame = *pSample;
 		int diff = thisFrame - lastFrame;
-		
+
 		int sign = 0;
 		if (diff > EDGE_SLOPE_THRESHOLD)
 		{
@@ -49,7 +50,7 @@ static int analyze( SAMPLE *inputBuffer,
 			// Signal is falling
 			sign = -1;
 		}
-		
+
 		// If the signal has changed direction or the edge detector has gone on for too long,
 		//  then close out the current edge detection phase
 		if(data->edgeSign != sign || (data->edgeSign && data->edgeWidth + 1 > EDGE_MAX_WIDTH))
@@ -60,11 +61,11 @@ static int analyze( SAMPLE *inputBuffer,
 				[analyzer edge:data->edgeDiff
 						 width:data->edgeWidth
 					  interval:data->plateauWidth + data->edgeWidth];
-				
+
 				// Save the edge
 				data->lastEdgeSign = data->edgeSign;
 				data->lastEdgeWidth = data->edgeWidth;
-				
+
 				// Reset the plateau
 				data->plateauWidth = 0;
 				idleInterval = data->edgeWidth;
@@ -85,7 +86,7 @@ static int analyze( SAMPLE *inputBuffer,
 					data->plateauMin = data->edgeMin;
 #endif
 			}
-			
+
 			data->edgeSign = sign;
 			data->edgeWidth = 0;
 			data->edgeDiff = 0;
@@ -94,7 +95,7 @@ static int analyze( SAMPLE *inputBuffer,
 			data->edgeMin = data->edgeMax = lastFrame;
 #endif
 		}
-		
+
 		if(data->edgeSign)
 		{
 			// Sample may be part of an edge
@@ -121,14 +122,14 @@ static int analyze( SAMPLE *inputBuffer,
 #endif
 		}
 		idleInterval++;
-		
+
 		data->lastFrame = lastFrame = thisFrame;
-		
+
 		if ( (idleInterval % IDLE_CHECK_PERIOD) == 0 )
 			[analyzer idle:idleInterval];
-		
+
 	}
-	
+
 	return 0;
 }
 
@@ -143,17 +144,17 @@ static void recordingCallback (
 ) {
 	// This is not a Cocoa thread, it needs a manually allocated pool
 //    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-	
+
  	// This callback, being outside the implementation block, needs a reference to the AudioRecorder object
 	AudioSignalAnalyzer *analyzer = (__bridge AudioSignalAnalyzer *) inUserData;
-	
+
 	// if there is audio data, analyze it
 	if (inNumPackets > 0) {
-		analyze((SAMPLE*)inBuffer->mAudioData, inBuffer->mAudioDataByteSize / BYTES_PER_FRAME, analyzer);		
+		analyze((SAMPLE*)inBuffer->mAudioData, inBuffer->mAudioDataByteSize / BYTES_PER_FRAME, analyzer);
 	}
-	
+
 	// if not stopping, re-enqueue the buffer so that it can be filled again
-	if ([analyzer isRunning]) {		
+	if ([analyzer isRunning]) {
 		AudioQueueEnqueueBuffer (
 								 inAudioQueue,
 								 inBuffer,
@@ -161,7 +162,7 @@ static void recordingCallback (
 								 NULL
 								 );
 	}
-	
+
 //	[pool release];
 }
 
@@ -180,7 +181,7 @@ static void recordingCallback (
 {
 	self = [super init];
 
-	if (self != nil) 
+	if (self != nil)
 	{
 		recognizers = [[NSMutableArray alloc] init];
 		// these statements define the audio stream basic description
@@ -193,8 +194,8 @@ static void recordingCallback (
 		audioFormat.mBitsPerChannel		= 16;
 		audioFormat.mBytesPerPacket		= 2;
 		audioFormat.mBytesPerFrame		= 2;
-		
-		
+
+
 		AudioQueueNewInput (
 							&audioFormat,
 							recordingCallback,
@@ -204,7 +205,7 @@ static void recordingCallback (
 							0,										// flags
 							&queueObject
 							);
-		
+
 	}
 	return self;
 }
@@ -217,13 +218,13 @@ static void recordingCallback (
 - (void) record
 {
 	[self setupRecording];
-	
+
 	[self reset];
-	
+
 	AudioQueueStart (
 					 queueObject,
 					 NULL			// start time. NULL means ASAP.
-					 );	
+					 );
 }
 
 
@@ -233,7 +234,7 @@ static void recordingCallback (
 					queueObject,
 					TRUE
 					);
-	
+
 	[self reset];
 }
 
@@ -243,16 +244,16 @@ static void recordingCallback (
 	// allocate and enqueue buffers
 	int bufferByteSize = 4096;		// this is the maximum buffer size used by the player class
 	int bufferIndex;
-	
+
 	for (bufferIndex = 0; bufferIndex < 20; ++bufferIndex) {
-		
+
 		AudioQueueBufferRef bufferRef;
-		
+
 		AudioQueueAllocateBuffer (
 								  queueObject,
 								  bufferByteSize, &bufferRef
 								  );
-		
+
 		AudioQueueEnqueueBuffer (
 								 queueObject,
 								 bufferRef,
@@ -282,7 +283,7 @@ static void recordingCallback (
 - (void) reset
 {
 	[recognizers makeObjectsPerformSelector:@selector(reset)];
-	
+
 	memset(&pulseData, 0, sizeof(pulseData));
 }
 

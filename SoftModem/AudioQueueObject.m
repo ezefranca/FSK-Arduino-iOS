@@ -6,6 +6,7 @@
 //  Culled from SpeakHere sample code.
 //  Copyright 2008 Perceptive Development. All rights reserved.
 //
+//  Edited by Ezequiel Franca on 20/04/14
 
 #import "AudioQueueObject.h"
 
@@ -16,18 +17,18 @@
 @synthesize audioFormat;
 
 - (BOOL) isRunning {
-	
+
 	UInt32		isRunning;
 	UInt32		propertySize = sizeof (UInt32);
 	OSStatus	result;
-	
+
 	result =	AudioQueueGetProperty (
 									   queueObject,
 									   kAudioQueueProperty_IsRunning,
 									   &isRunning,
 									   &propertySize
 									   );
-	
+
 	if (result != noErr) {
 		return false;
 	} else {

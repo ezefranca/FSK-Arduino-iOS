@@ -6,6 +6,7 @@
 //  Culled from SpeakHere sample code.
 //  Copyright 2008 Perceptive Development. All rights reserved.
 //
+//  Edited by Ezequiel Franca on 20/04/14
 
 #import <UIKit/UIKit.h>
 #include <AudioToolbox/AudioToolbox.h>

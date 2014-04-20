@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "CharReceiver.h"
 
 @interface MultiDelegate : NSObject {
 	NSMutableSet* delegateSet;

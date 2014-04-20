@@ -5,6 +5,7 @@
 //  Created by George Dean on 12/22/08.
 //  Copyright 2008 Perceptive Development. All rights reserved.
 //
+//  Edited by Ezequiel Franca on 20/04/14
 
 #import "PatternRecognizer.h"
 
