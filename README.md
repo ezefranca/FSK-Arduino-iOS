@@ -1,4 +1,4 @@
-FSK-iOS7
+FSK-iOS7 [![Build Status](https://travis-ci.org/ezefranca/FSK-Arduino-iOS7.svg?branch=master)](https://travis-ci.org/ezefranca/FSK-Arduino-iOS7)
 ========
 
 Dependencies for iOS7 Development Non-ARC, using [Sofmodem Arduino library](https://code.google.com/p/arms22/downloads/detail?name=SoftModem-005.zip&can=2&q=), with FSK communication.
