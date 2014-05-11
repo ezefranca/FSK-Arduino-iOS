@@ -3,6 +3,8 @@ FSK-iOS7 [![Build Status](https://travis-ci.org/ezefranca/FSK-Arduino-iOS7.svg?b
 
 Dependencies for iOS7 Development Non-ARC, using [Sofmodem Arduino library](https://code.google.com/p/arms22/downloads/detail?name=SoftModem-005.zip&can=2&q=), with FSK communication.
 
+[![imagem](https://raw.githubusercontent.com/ezefranca/FSK-Arduino-iOS7/master/FSK-Demo/image.png)](http://ironbark.xtelco.com.au/subjects/DC/lectures/7/)
+
 =====
 
 How to use
@@ -130,5 +132,7 @@ Links and Credits
 [iOS 4/5 ARC version](https://github.com/9labco/IR-Remote)
 
 [FSK Wikipedia](http://en.wikipedia.org/wiki/Frequency-shift_keying)
+
+[FSK Explanation](http://ironbark.xtelco.com.au/subjects/DC/lectures/7/)
 
 
