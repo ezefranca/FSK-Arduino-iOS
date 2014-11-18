@@ -163,7 +163,6 @@ static void recordingCallback (
 								 );
 	}
 
-//	[pool release];
 }
 
 

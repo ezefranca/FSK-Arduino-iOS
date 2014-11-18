@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "CharReceiver.h"
 
-@interface MultiDelegate : NSObject {
+@interface MultiDelegate : NSObject <CharReceiver>{
 	NSMutableSet* delegateSet;
 	Protocol* proto;
 }

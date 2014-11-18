@@ -51,4 +51,9 @@
 			[invocation invokeWithTarget:delegate];
 	}
 }
+
+//- (void) receivedChar:(char)input{
+//    //
+//}
+
 @end

@@ -1,6 +1,6 @@
 
 //
-//  FSKRecognizer.m
+//  FSKRecognizer.mm
 //  FSK Terminal
 //
 //  Created by George Dean on 12/22/08.
