@@ -10,9 +10,9 @@ Dependencies for iOS Development, using [Sofmodem Arduino library](https://code.
 How to use
 ====
 
-This libraries have a propouse work with an Arduino using a Sofmodem Shield* to communicate with iOS using FSK. Currently, the source code of the SoftModem is not made as a framework. If you want to use SoftModem in your project, the source code you have two ways:
+This libraries have a propouse work with an Arduino using a Sofmodem Shield* to communicate with iOS using FSK. Currently, the source code of the SoftModem is not made as a framework. If you want to use SoftModem in your project, you have two ways:
 
-## Adding MBProgressHUD to your project
+## Adding FSK-Arduino-iOS to your project
 
 ### Cocoapods
 
