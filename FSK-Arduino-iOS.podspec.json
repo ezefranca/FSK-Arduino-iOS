@@ -1,16 +1,17 @@
 Pod::Spec.new do |s|
-  spec.name         = "FSK-Arduino-iOS"
-  spec.version      = "0.0.1"
+  s.name         = "FSK-Arduino-iOS"
+  s.version      = "0.0.1"
   s.summary         = "FSK Library for iOS interface with Arduino Development"
-  spec.license      = { :type => 'BSD' }
-  spec.homepage     = "https://github.com/ezefranca/FSK-Arduino-iOS"
-  spec.authors      = { "Ezequiel Franca" => "ezequiel.ifsp@gmail.com"}
+  s.license      = { :type => "MIT", :file => "LICENSE" }
+  s.homepage     = "https://github.com/ezefranca/FSK-Arduino-iOS"
+  s.authors      = { "Ezequiel Franca" => "ezequiel.ifsp@gmail.com"}
   s.social_media_url   = "http://twitter.com/ezefranca"
   s.platform     = :ios, '7.0'
-  spec.source       = { 
-  		:git => 'https://github.com/ezefranca/FSK-Arduino-iOS.git', :tag => s.version.to_s 
+  s.source       = { 
+  		:git => "https://github.com/ezefranca/FSK-Arduino-iOS.git", 
+  		:tag => s.version.to_s 
   }
-  spec.source_files = "FSK-Arduino-iOS/SoftModem.{h,m}, FSK-Arduino-iOS/FK.{h,m}"
-  spec.framework    = "AudioToolbox", "AVFoundation"
+  s.source_files = "FSK-Arduino-iOS/SoftModem.{h,m}, FSK-Arduino-iOS/FK.{h,m}"
+  s.framework    = "AudioToolbox", "AVFoundation"
   s.requires_arc = false
 end
