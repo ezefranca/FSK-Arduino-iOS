@@ -9,7 +9,8 @@ Pod::Spec.new do |s|
   s.social_media_url   = "http://twitter.com/ezefranca"
   s.platform     = :ios
   s.source       = { :git => "https://github.com/ezefranca/FSK-Arduino-iOS.git", :tag => "0.0.1" }
-  s.source_files = "../SoftModem.{h,m}, ../FK.{h,m}"
+  #s.source_files = "../SoftModem.{h,m}, ../FK.{h,m}"
+  s.source_files = "Classes/*"
   s.exclude_files = "Arduino-SoftModem"
   s.requires_arc = false
 end
