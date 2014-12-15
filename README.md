@@ -1,7 +1,7 @@
-FSK-iOS7 [![Build Status](http://img.shields.io/travis/ezefranca/FSK-Arduino-iOS.svg?style=flat)](https://travis-ci.org/ezefranca/FSK-Arduino-iOS)
+FSK-iOS [![Build Status](http://img.shields.io/travis/ezefranca/FSK-Arduino-iOS.svg?style=flat)](https://travis-ci.org/ezefranca/FSK-Arduino-iOS)
 ========
 
-Dependencies for iOS Development Non-ARC, using [Sofmodem Arduino library](https://code.google.com/p/arms22/downloads/detail?name=SoftModem-005.zip&can=2&q=), with FSK communication.
+Dependencies for iOS Development, using [Sofmodem Arduino library](https://code.google.com/p/arms22/downloads/detail?name=SoftModem-005.zip&can=2&q=), with FSK communication.
 
 [![imagem](https://raw.githubusercontent.com/ezefranca/FSK-Arduino-iOS7/master/FSK-Demo/image.png)](http://ironbark.xtelco.com.au/subjects/DC/lectures/7/)
 
@@ -10,7 +10,23 @@ Dependencies for iOS Development Non-ARC, using [Sofmodem Arduino library](https
 How to use
 ====
 
-This libraries have a propouse work with an Arduino using a Sofmodem Shield* to communicate with iOS using FSK. Currently, the source code of the SoftModem is not made as a framework. If you want to use SoftModem in your project, the source code related to the SoftModem must be copied from the source code of the SoftModemTerminal. The following is the list of source code related to SoftModem. Please copy these to the project source code.
+This libraries have a propouse work with an Arduino using a Sofmodem Shield* to communicate with iOS using FSK. Currently, the source code of the SoftModem is not made as a framework. If you want to use SoftModem in your project, the source code you have two ways:
+
+## Adding MBProgressHUD to your project
+
+### Cocoapods
+
+[CocoaPods](http://cocoapods.org) is the recommended way to add FSK-Arduino-iOS to your project.
+
+1. Add a pod entry for FSK-Arduino-iOS to your Podfile `pod 'FSK-Arduino-iOS', '~> 0.0.2'`
+2. Install the pod(s) by running `pod install`.
+
+### Source files
+
+Alternatively you can directly adding source files to your project.
+
+1. Download the [latest code version](https://github.com/ezefranca/FSK-Arduino-iOS/archive/master.zip) or add the repository as a git submodule to your git-tracked project. 
+2. The Folder /FSK must be copied from the source code of your project. The following is the list of source code related to FSK. Please copy these to the project source code.
 
 ```objectivec
 * AudioQueueObject.h
@@ -125,7 +141,7 @@ Sending data is much easier than receiving data. FSKSerialGenerator class's writ
 
 Links and Credits
 =====
-[arms22](http://arms22.blog91.fc2.com/) - creator of Softmodem hardware, libraries for Arduino and ARC version lib for iOS.
+[arms22](http://arms22.blog91.fc2.com/) - Creator of Softmodem hardware, libraries for Arduino and ARC version lib for iOS.
 
 [Arduino Libraries](https://code.google.com/p/arms22/downloads/detail?name=SoftModem-005.zip&can=2&q=)
 
@@ -134,5 +150,9 @@ Links and Credits
 [FSK Wikipedia](http://en.wikipedia.org/wiki/Frequency-shift_keying)
 
 [FSK Explanation](http://ironbark.xtelco.com.au/subjects/DC/lectures/7/)
+
+License
+=====
+This code is distributed under the terms and conditions of the [MIT license](LICENSE). 
 
 
