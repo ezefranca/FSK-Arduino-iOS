@@ -1,5 +1,9 @@
-FSK-iOS [![Build Status](http://img.shields.io/travis/ezefranca/FSK-Arduino-iOS.svg?style=flat)](https://travis-ci.org/ezefranca/FSK-Arduino-iOS)
+FSK-iOS 
 ========
+[![Build Status](http://img.shields.io/travis/ezefranca/FSK-Arduino-iOS.svg?style=flat)](https://travis-ci.org/ezefranca/FSK-Arduino-iOS)
+[![Badge w/ Version](https://cocoapod-badges.herokuapp.com/v/FSK-Arduino-iOS/badge.png)](http://cocoadocs.org/docsets/FSK-Arduino-iOS)
+[![Badge w/ Platform](https://cocoapod-badges.herokuapp.com/p/FSK-Arduino-iOS/badge.svg)](http://cocoadocs.org/docsets/FSK-Arduino-iOS)
+
 
 Dependencies for iOS Development, using [Sofmodem Arduino library](https://code.google.com/p/arms22/downloads/detail?name=SoftModem-005.zip&can=2&q=), with FSK communication.
 
