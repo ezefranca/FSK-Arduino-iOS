@@ -1,0 +1,194 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>FSK-Arduino-iOS by ezefranca</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>FSK-Arduino-iOS</h1>
+        <p>FSK Library for iOS interface with Arduino Development</p>
+
+        <p class="view"><a href="https://github.com/ezefranca/FSK-Arduino-iOS">View the Project on GitHub <small>ezefranca/FSK-Arduino-iOS</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/ezefranca/FSK-Arduino-iOS/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/ezefranca/FSK-Arduino-iOS/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/ezefranca/FSK-Arduino-iOS">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="fsk-arduino-ios-" class="anchor" href="#fsk-arduino-ios-" aria-hidden="true"><span class="octicon octicon-link"></span></a>FSK-Arduino-iOS </h1>
+
+<p><a href="https://travis-ci.org/ezefranca/FSK-Arduino-iOS"><img src="http://img.shields.io/travis/ezefranca/FSK-Arduino-iOS.svg?style=flat" alt="Build Status"></a>
+<a href="http://cocoadocs.org/docsets/FSK-Arduino-iOS"><img src="https://cocoapod-badges.herokuapp.com/v/FSK-Arduino-iOS/badge.png" alt="Badge w/ Version"></a>
+<a href="http://cocoadocs.org/docsets/FSK-Arduino-iOS"><img src="https://cocoapod-badges.herokuapp.com/p/FSK-Arduino-iOS/badge.svg" alt="Badge w/ Platform"></a>
+<a href="https://app.wercker.com/project/bykey/7d5a33ceed1006aae64e3937f40d2bf1"><img src="https://app.wercker.com/status/7d5a33ceed1006aae64e3937f40d2bf1/s" alt="wercker status" title="wercker status"></a></p>
+
+<p>Dependencies for iOS Development, using <a href="https://code.google.com/p/arms22/downloads/detail?name=SoftModem-005.zip&amp;can=2&amp;q=">Sofmodem Arduino library</a>, with FSK communication.</p>
+
+<p><a href="http://ironbark.xtelco.com.au/subjects/DC/lectures/7/"><img src="https://raw.githubusercontent.com/ezefranca/FSK-Arduino-iOS7/master/FSK-Demo/image.png" alt="imagem"></a></p>
+
+<h1></h1>
+
+<h1>
+<a id="how-to-use" class="anchor" href="#how-to-use" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to use</h1>
+
+<p>This libraries have a propouse work with an Arduino using a Sofmodem Shield* to communicate with iOS using FSK. Currently, the source code of the SoftModem is not made as a framework. If you want to use SoftModem in your project, you have two ways:</p>
+
+<h2>
+<a id="adding-fsk-arduino-ios-to-your-project" class="anchor" href="#adding-fsk-arduino-ios-to-your-project" aria-hidden="true"><span class="octicon octicon-link"></span></a>Adding FSK-Arduino-iOS to your project</h2>
+
+<h3>
+<a id="cocoapods" class="anchor" href="#cocoapods" aria-hidden="true"><span class="octicon octicon-link"></span></a>Cocoapods</h3>
+
+<p><a href="http://cocoapods.org">CocoaPods</a> is the recommended way to add FSK-Arduino-iOS to your project.</p>
+
+<ol>
+<li>Add a pod entry for FSK-Arduino-iOS to your Podfile <code>pod 'FSK-Arduino-iOS', '~&gt; 0.0.2'</code>
+</li>
+<li>Install the pod(s) by running <code>pod install</code>.</li>
+</ol>
+
+<h3>
+<a id="source-files" class="anchor" href="#source-files" aria-hidden="true"><span class="octicon octicon-link"></span></a>Source files</h3>
+
+<p>Alternatively you can directly adding source files to your project.</p>
+
+<ol>
+<li>Download the <a href="https://github.com/ezefranca/FSK-Arduino-iOS/archive/master.zip">latest code version</a> or add the repository as a git submodule to your git-tracked project. </li>
+<li>The Folder /FSK must be copied from the source code of your project. The following is the list of source code related to FSK. Please copy these to the project source code.</li>
+</ol>
+
+<div class="highlight highlight-objectivec"><pre>* AudioQueueObject.h
+* AudioQueueObject.m
+* AudioSignalAnalyzer.h
+* AudioSignalAnalyzer.m
+* AudioSignalGenerator.h
+* AudioSignalGenerator.m
+* CharReceiver.h
+* FSKModemConfig.h
+* FSKByteQueue.h
+* FSKRecognizer.h
+* FSKRecognizer.mm
+* FSKSerialGenerator.h
+* FSKSerialGenerator.m
+* lockfree.h
+* MultiDelegate.h
+* MultiDelegate.m
+* PatternRecognizer.h</pre></div>
+
+<p>SoftModem uses the following two framework for audio input and output. Please add them to your project.</p>
+
+<p><img src="https://raw.githubusercontent.com/ezefranca/FSK-Arduino-iOS7/master/FSK-Demo/FSK-Demo/framework.png" alt="Image"></p>
+
+<div class="highlight highlight-objectivec"><pre>* AudioToolbox.framework
+* AVFoundation.framework</pre></div>
+
+<h1>
+<a id="initialization" class="anchor" href="#initialization" aria-hidden="true"><span class="octicon octicon-link"></span></a>Initialization</h1>
+
+<p>First, set the category of application with AVAudioSession class. To do voice recording and playback, AVAudioSessionCategoryPlayAndRecord need to be set.</p>
+
+<div class="highlight highlight-objectivec"><pre>AVAudioSession *session = [AVAudioSession <span class="pl-c1">sharedInstance</span>];   
+[[<span class="pl-c1">NSNotificationCenter</span> <span class="pl-c1">defaultCenter</span>] <span class="pl-c1">addObserver:</span><span class="pl-v">self</span> <span class="pl-c1">selector:</span><span class="pl-k">@selector</span>(<span class="pl-c1">interruption:</span>) <span class="pl-c1">name:</span>
+AVAudioSessionInterruptionNotification <span class="pl-c1">object:</span><span class="pl-c1">nil</span>];
+
+[session <span class="pl-c1">setCategory:</span>AVAudioSessionCategoryPlayAndRecord <span class="pl-c1">error:</span><span class="pl-c1">nil</span>];
+[session <span class="pl-c1">setCategory:</span>AVAudioSessionCategoryPlayback <span class="pl-c1">error:</span><span class="pl-c1">nil</span>];
+[session <span class="pl-c1">setActive:</span><span class="pl-c1">YES</span> <span class="pl-c1">error:</span><span class="pl-c1">nil</span>];</pre></div>
+
+<p>interruption selector method</p>
+
+<div class="highlight highlight-objectivec"><pre>- (<span class="pl-k">void</span>) interruption:(<span class="pl-c1">NSNotification</span>*)notification
+{
+    <span class="pl-c1">NSDictionary</span> *interuptionDict = notification.<span class="pl-smi">userInfo</span>;
+    <span class="pl-k">NSUInteger</span> interuptionType = (<span class="pl-k">NSUInteger</span>)[interuptionDict <span class="pl-c1">valueForKey:</span>AVAudioSessionInterruptionTypeKey];
+
+    <span class="pl-k">if</span> (interuptionType == AVAudioSessionInterruptionTypeBegan)
+        [<span class="pl-v">self</span> <span class="pl-c1">beginInterruption</span>];
+#<span class="pl-k">if</span> __CC_PLATFORM_IOS &gt;= 40000
+    <span class="pl-k">else</span> <span class="pl-k">if</span> (interuptionType == AVAudioSessionInterruptionTypeEnded)
+        [<span class="pl-v">self</span> <span class="pl-c1">endInterruptionWithFlags:</span>(<span class="pl-k">NSUInteger</span>)[interuptionDict <span class="pl-c1">valueForKey:</span>AVAudioSessionInterruptionOptionKey]];
+#<span class="pl-k">else</span>
+    <span class="pl-k">else</span> <span class="pl-k">if</span> (interuptionType == AVAudioSessionInterruptionTypeEnded)
+        [<span class="pl-v">self</span> <span class="pl-c1">endInterruption</span>];
+#<span class="pl-k">endif</span>
+}</pre></div>
+
+<p>Next, for analysis of the voice, make instance of class AudioSignalAnalyzer, FSKRecognizer and AudioSignalAnalyzer parses the input waveform from the microphone to detect the falling and rising edge of the waveform. FSKRecognizer restores the data bits based on the results of the analysis of AudioSignalAnalyzer.</p>
+
+<div class="highlight highlight-objectivec"><pre>        recognizer = [[FSKRecognizer <span class="pl-c1">alloc</span>] <span class="pl-c1">init</span>];     
+        [recognizer <span class="pl-c1">addReceiver:</span><span class="pl-v">self</span>];
+        analyzer = [[AudioSignalAnalyzer <span class="pl-c1">alloc</span>] <span class="pl-c1">init</span>]; 
+        [analyzer <span class="pl-c1">addRecognizer:</span>recognizer];</pre></div>
+
+<p>Then create an instance of a class FSKSerialGenerator for sound output. FSKSerialGenerator converts the data bits to audio signal and output.</p>
+
+<div class="highlight highlight-objectivec"><pre>        generator = [[FSKSerialGenerator <span class="pl-c1">alloc</span>] <span class="pl-c1">init</span>]; 
+        [generator <span class="pl-c1">play</span>];</pre></div>
+
+<h1>
+<a id="receiving" class="anchor" href="#receiving" aria-hidden="true"><span class="octicon octicon-link"></span></a>Receiving</h1>
+
+<p>Register the class that implements the CharReceiver protocol to the FSKRecognizer class, and AVAudioSessionDelegate.</p>
+
+<div class="highlight highlight-objectivec"><pre><span class="pl-k">@interface</span> <span class="pl-en">YourClass</span> : <span class="pl-e">NSObject</span> &lt;AVAudioSessionDelegate, CharReceiver&gt;</pre></div>
+
+<p>Register FSKRecognizer class at initialization.</p>
+
+<div class="highlight highlight-objectivec"><pre>YourClass *yourClassInstance;
+[recognizer <span class="pl-c1">addReceiver:</span> yourClassInstance];</pre></div>
+
+<p>receivedChar: method is called　when one byte of data is received.</p>
+
+<div class="highlight highlight-objectivec"><pre>- (<span class="pl-k">void</span>) receivedChar: (<span class="pl-k">char</span>) input
+{
+     <span class="pl-c">// Receive handling</span>
+}</pre></div>
+
+<h1>
+<a id="sending" class="anchor" href="#sending" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sending</h1>
+
+<p>Sending data is much easier than receiving data. FSKSerialGenerator class's writeByte: method to sends a single byte.</p>
+
+<div class="highlight highlight-objectivec"><pre>[generator <span class="pl-c1">writeByte:</span> 0xff];</pre></div>
+
+<h1>
+<a id="links-and-credits" class="anchor" href="#links-and-credits" aria-hidden="true"><span class="octicon octicon-link"></span></a>Links and Credits</h1>
+
+<p><a href="http://arms22.blog91.fc2.com/">arms22</a> - Creator of Softmodem hardware, libraries for Arduino and ARC version lib for iOS.</p>
+
+<p><a href="https://code.google.com/p/arms22/downloads/detail?name=SoftModem-005.zip&amp;can=2&amp;q=">Arduino Libraries</a></p>
+
+<p><a href="https://github.com/9labco/IR-Remote">iOS 4/5 ARC version</a></p>
+
+<p><a href="http://en.wikipedia.org/wiki/Frequency-shift_keying">FSK Wikipedia</a></p>
+
+<p><a href="http://ironbark.xtelco.com.au/subjects/DC/lectures/7/">FSK Explanation</a></p>
+
+<h1>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h1>
+
+<p>This code is distributed under the terms and conditions of the <a href="LICENSE">MIT license</a>. </p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/ezefranca">ezefranca</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
