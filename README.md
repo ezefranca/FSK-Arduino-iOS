@@ -19,7 +19,7 @@ This libraries have a propouse work with an Arduino using a Sofmodem Shield* to 
 
 ## Adding FSK-Arduino-iOS to your project
 
-### Cocoapods
+### CocoaPods
 
 [CocoaPods](http://cocoapods.org) is the recommended way to add FSK-Arduino-iOS to your project.
 
