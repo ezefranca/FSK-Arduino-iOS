@@ -1,0 +1,16 @@
+PODS:
+  - EFArduinoFSK (0.3.0)
+
+DEPENDENCIES:
+  - EFArduinoFSK (from `../`)
+
+EXTERNAL SOURCES:
+  EFArduinoFSK:
+    :path: ../
+
+SPEC CHECKSUMS:
+  EFArduinoFSK: 710abc9cfb316136ec055fdbbb58056644e1f3c2
+
+PODFILE CHECKSUM: 9378f1e79299c70b619e2a37a0673acfb0ad98f3
+
+COCOAPODS: 1.0.0
