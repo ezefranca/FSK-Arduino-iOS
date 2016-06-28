@@ -10,9 +10,7 @@
 #import "FSKSerialGenerator.h"
 #import "lockfree.h"
 #import "MultiDelegate.h"
-#import "NSString+HexColor.h"
 #import "PatternRecognizer.h"
-#import "UIView+Layout.h"
 
 FOUNDATION_EXPORT double EFArduinoFSKVersionNumber;
 FOUNDATION_EXPORT const unsigned char EFArduinoFSKVersionString[];
