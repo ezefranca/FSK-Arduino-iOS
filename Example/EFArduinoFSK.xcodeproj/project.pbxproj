@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09ECAF151D22FE350047DDE2 /* FSKAudioDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 09ECAF141D22FE350047DDE2 /* FSKAudioDemo.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		09ECAF131D22FE350047DDE2 /* FSKAudioDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSKAudioDemo.h; path = Demo/FSKAudioDemo.h; sourceTree = "<group>"; };
+		09ECAF141D22FE350047DDE2 /* FSKAudioDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSKAudioDemo.m; path = Demo/FSKAudioDemo.m; sourceTree = "<group>"; };
 		261EBF6806553BAE213EA51C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		2F8A87BBE4062B785549AEB8 /* EFArduinoFSK.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = EFArduinoFSK.podspec; path = ../EFArduinoFSK.podspec; sourceTree = "<group>"; };
 		592D385D16B06BBD130F6FA6 /* Pods-EFArduinoFSK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EFArduinoFSK_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EFArduinoFSK_Tests/Pods-EFArduinoFSK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -93,6 +96,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09ECAF121D22FDF60047DDE2 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				09ECAF131D22FE350047DDE2 /* FSKAudioDemo.h */,
+				09ECAF141D22FE350047DDE2 /* FSKAudioDemo.m */,
+			);
+			name = Demo;
+			sourceTree = "<group>";
+		};
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +147,7 @@
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* FSKViewController.h */,
 				6003F5A6195388D20070C39A /* FSKViewController.m */,
+				09ECAF121D22FDF60047DDE2 /* Demo */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
 			);
@@ -390,6 +403,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09ECAF151D22FE350047DDE2 /* FSKAudioDemo.m in Sources */,
 				6003F59E195388D20070C39A /* FSKAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* FSKViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
