@@ -22,7 +22,7 @@ TODO: Add long description of the pod here.
   s.social_media_url = 'https://twitter.com/ezefranca'
 
   s.ios.deployment_target = '7.0'
-
+  s.platform     = :ios
   s.source_files = 'EFArduinoFSK/Classes/**/*'
   
   s.requires_arc = false
