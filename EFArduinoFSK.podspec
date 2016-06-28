@@ -8,30 +8,26 @@
 
 Pod::Spec.new do |s|
   s.name             = 'EFArduinoFSK'
-  s.version          = '0.1.0'
+  s.version          = '0.3.0'
   s.summary          = 'A short description of EFArduinoFSK.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
   s.description      = <<-DESC
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/EFArduinoFSK'
+  s.homepage         = 'https://github.com/ezefranca/EFArduinoFSK'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'ezefranca' => 'techthings@webmotors.com.br' }
-  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/EFArduinoFSK.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.author           = { 'ezefranca' => 'ezequiel.ifsp@gmail.com' }
+  s.source           = { :git => 'https://github.com/ezefranca/EFArduinoFSK.git', :branch => 'develop' }
+  s.social_media_url = 'https://twitter.com/ezefranca'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '7.0'
 
   s.source_files = 'EFArduinoFSK/Classes/**/*'
   
+  s.requires_arc = false
+  s.frameworks   = 'AudioToolbox', 'AVFoundation'
+
   # s.resource_bundles = {
   #   'EFArduinoFSK' => ['EFArduinoFSK/Assets/*.png']
   # }
