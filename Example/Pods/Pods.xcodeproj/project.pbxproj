@@ -1,0 +1,769 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0434A48204D52B0B2A50F4549A8DF59F /* Pods-EFArduinoFSK_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 832B415D9086699724CDE36B256A3F01 /* Pods-EFArduinoFSK_Example-dummy.m */; };
+		06B1C355FA3EB3D9D8E55BF61B6E30A3 /* AudioSignalGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C91141E5F087D3D48E23AAF695D798 /* AudioSignalGenerator.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		07DDD777E49291B7D3BC8492B7F12329 /* UIView+Layout.h in Headers */ = {isa = PBXBuildFile; fileRef = 11AE016A08390AA8FE1D051EE2B3B653 /* UIView+Layout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0964DAD6B15B10859DAB597ECCE93432 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE3B466B7B5E776DF8BFF54EF8237EBD /* AudioToolbox.framework */; };
+		0A4127618FC49A3E9CF836B5384DAF1E /* CharReceiver.h in Headers */ = {isa = PBXBuildFile; fileRef = CF8ACD7A9B561AEC4D43C46F4997EE9A /* CharReceiver.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0E8B906E686A759B15CE0EF7B1DF0C8E /* NSString+HexColor.h in Headers */ = {isa = PBXBuildFile; fileRef = E5538BD33BB9CE3818F27038EA2B0A46 /* NSString+HexColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1277231A5102827B469A3C4FAA9D05D7 /* FSKSerialGenerator.mm in Sources */ = {isa = PBXBuildFile; fileRef = 751DDD2DAACDB5B576675FD824E851A4 /* FSKSerialGenerator.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1C574EE552DA8E924927D997608CBCBA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 194273A2CAEC094E10E98C21B4466BDE /* Foundation.framework */; };
+		1EBE1896134DFD4871BCF653A69CD302 /* NSString+HexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2B4FBD236CE2F1BCAF29CAEB402B7A /* NSString+HexColor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		332E8D4816C9BCE00967A8CDAB2E7DC7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 194273A2CAEC094E10E98C21B4466BDE /* Foundation.framework */; };
+		3FBFA87C512283D825E5A61319F5A062 /* FSKModemConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = C00F6ABC3102DD69194147284EFD5804 /* FSKModemConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4719E8613143A79C586BE79147A0FA2A /* EFArduinoFSK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 18E0135ECC46533CE686A2FCA877717F /* EFArduinoFSK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		51F1DC65AA0B198CE5147C610B0471CA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 194273A2CAEC094E10E98C21B4466BDE /* Foundation.framework */; };
+		5BE8722DD66B64E4A0A0E82D6CC63CCD /* Pods-EFArduinoFSK_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D3CAB002AC5461A274F56C355A765E36 /* Pods-EFArduinoFSK_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5E63A5EBCE14C7DD6E825CDEF654CD6B /* MultiDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AB19D7A0A792EEB80A58F3E88CC4CFC /* MultiDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61D43845473B9CB8FA38404DFCE9971A /* AudioSignalGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C67892FBFF0273D8CDAA6830783EFE0 /* AudioSignalGenerator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		67D2418F59B7B85E86BFA5546173792B /* AudioQueueObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A5C158335C2ABCB1E1F2269EFE7726 /* AudioQueueObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		78A9C5702153F7FADE4E694323CC4B1E /* AudioSignalAnalyzer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AFF02AAB6ED79E18D58FFC72FECEFB8 /* AudioSignalAnalyzer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7C67114D28009CB263AAA33B417575D7 /* PatternRecognizer.h in Headers */ = {isa = PBXBuildFile; fileRef = DD614341E44075BDF4563440FB549736 /* PatternRecognizer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7F0C6943A51FDF61FA4A40A3DBAA43C9 /* FSKSerialGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = 488B15E710F0D5D0FB6E6F18D233AF94 /* FSKSerialGenerator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		91B89F7ED7A149FA227D9DD2737C9189 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B61FEBEA91AF176B7DD08922228DA51 /* AVFoundation.framework */; };
+		AE973C797F46B9D92F27BAD8E0E6A797 /* Pods-EFArduinoFSK_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 927940E06B00F2B960D19EAC1D976655 /* Pods-EFArduinoFSK_Tests-dummy.m */; };
+		CB41ADA5C244F05C4691308738C7432D /* FSKRecognizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A040F3584A2EA4349EBA4EFF7D5D35C /* FSKRecognizer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CC9132529306D30B121E71CFBFF214B4 /* Pods-EFArduinoFSK_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E7D7C149A5577723F0F34C4AC8E4F9C /* Pods-EFArduinoFSK_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D300C0515714EA010863151F4446ED37 /* MultiDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2CCAE8C97AE8EC104EE79BE0177CE4 /* MultiDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DB5157BD8A6411CECBC0A54A6AC5EC3B /* FSKByteQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 108214012D2B9DB8151F5A7FD948A7DB /* FSKByteQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E1D77DF6BFC9F2B8CAFB45CFCB3A2C59 /* lockfree.h in Headers */ = {isa = PBXBuildFile; fileRef = BB3D360A73370ACCA4020789101AD412 /* lockfree.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E31BF2C152CDC8A24437169C47DDF694 /* AudioSignalAnalyzer.h in Headers */ = {isa = PBXBuildFile; fileRef = AA2C93D26180714B6BD0F818838B27DE /* AudioSignalAnalyzer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E7043177B2CCDEF3806892526E3ABE1F /* FSKRecognizer.mm in Sources */ = {isa = PBXBuildFile; fileRef = CFC8FF42AAAC486030C69CB0E15FB8BF /* FSKRecognizer.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F4CB948EFDA48B620A9DBCE0987C503B /* EFArduinoFSK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 68404271D944DD603F08DA37C568A672 /* EFArduinoFSK-dummy.m */; };
+		F67796C3940966988344FA997DF9C70A /* AudioQueueObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 1738BA22F5D24268E68567A2151D4688 /* AudioQueueObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		896509A03C73F477C4136C122B65AE5C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0FDD778A73F0E67BFB06E7006AF5AFA7;
+			remoteInfo = EFArduinoFSK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0F4CEA67D3BD7689198591D8B4B9469B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		108214012D2B9DB8151F5A7FD948A7DB /* FSKByteQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FSKByteQueue.h; sourceTree = "<group>"; };
+		11AE016A08390AA8FE1D051EE2B3B653 /* UIView+Layout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView+Layout.h"; sourceTree = "<group>"; };
+		15C91141E5F087D3D48E23AAF695D798 /* AudioSignalGenerator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AudioSignalGenerator.m; sourceTree = "<group>"; };
+		1738BA22F5D24268E68567A2151D4688 /* AudioQueueObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AudioQueueObject.h; sourceTree = "<group>"; };
+		18E0135ECC46533CE686A2FCA877717F /* EFArduinoFSK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EFArduinoFSK-umbrella.h"; sourceTree = "<group>"; };
+		194273A2CAEC094E10E98C21B4466BDE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		254AE8AFC0F09579179B3C2D41F07C03 /* Pods-EFArduinoFSK_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EFArduinoFSK_Example-frameworks.sh"; sourceTree = "<group>"; };
+		27B9F9DA5B1CD74905ACBA25945BDE82 /* Pods_EFArduinoFSK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EFArduinoFSK_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E725E1A233B07993855D7AA2AD0BB8C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		307DBE991C1B0BA2269B9B191F90DFCD /* Pods-EFArduinoFSK_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EFArduinoFSK_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		34A4C28C02769F3CFD9643D2F3B17D1B /* EFArduinoFSK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EFArduinoFSK-prefix.pch"; sourceTree = "<group>"; };
+		35850EA4851A6F36DF8615325CC56E49 /* Pods-EFArduinoFSK_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EFArduinoFSK_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		39191482D315A7FB12194EC02B56F02B /* EFArduinoFSK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EFArduinoFSK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AB19D7A0A792EEB80A58F3E88CC4CFC /* MultiDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MultiDelegate.h; sourceTree = "<group>"; };
+		41DAA7F4D41CE59A1F12D8B0B5A2DC02 /* Pods-EFArduinoFSK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EFArduinoFSK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		488B15E710F0D5D0FB6E6F18D233AF94 /* FSKSerialGenerator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FSKSerialGenerator.h; sourceTree = "<group>"; };
+		56C8ED872CFBA3BF22C047C0244F9E87 /* Pods-EFArduinoFSK_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EFArduinoFSK_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		5A2B4FBD236CE2F1BCAF29CAEB402B7A /* NSString+HexColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSString+HexColor.m"; sourceTree = "<group>"; };
+		5B61FEBEA91AF176B7DD08922228DA51 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		64C524B5DA0D709645CFDD2CB7FF9C64 /* EFArduinoFSK.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EFArduinoFSK.xcconfig; sourceTree = "<group>"; };
+		65011B55E22F3D762484039BF319606E /* Pods-EFArduinoFSK_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-EFArduinoFSK_Example.modulemap"; sourceTree = "<group>"; };
+		6761FF0F4B64E84586285E39131025EF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68404271D944DD603F08DA37C568A672 /* EFArduinoFSK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EFArduinoFSK-dummy.m"; sourceTree = "<group>"; };
+		73CF7B00912388D62599B926586E201A /* Pods_EFArduinoFSK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EFArduinoFSK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		751DDD2DAACDB5B576675FD824E851A4 /* FSKSerialGenerator.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; path = FSKSerialGenerator.mm; sourceTree = "<group>"; };
+		7A040F3584A2EA4349EBA4EFF7D5D35C /* FSKRecognizer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FSKRecognizer.h; sourceTree = "<group>"; };
+		7AFF02AAB6ED79E18D58FFC72FECEFB8 /* AudioSignalAnalyzer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AudioSignalAnalyzer.m; sourceTree = "<group>"; };
+		7C67892FBFF0273D8CDAA6830783EFE0 /* AudioSignalGenerator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AudioSignalGenerator.h; sourceTree = "<group>"; };
+		801BCDC033FC1A8A844B50720506D884 /* Pods-EFArduinoFSK_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EFArduinoFSK_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		832B415D9086699724CDE36B256A3F01 /* Pods-EFArduinoFSK_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EFArduinoFSK_Example-dummy.m"; sourceTree = "<group>"; };
+		885E3C6792DDCC6D0BA115DF7C5A50DF /* Pods-EFArduinoFSK_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-EFArduinoFSK_Tests.modulemap"; sourceTree = "<group>"; };
+		927940E06B00F2B960D19EAC1D976655 /* Pods-EFArduinoFSK_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EFArduinoFSK_Tests-dummy.m"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		94CCD9140F7F069B37D4F2788BDE6A6D /* Pods-EFArduinoFSK_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EFArduinoFSK_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9BDC3E4F1020C2B178861DB8A14D30C7 /* Pods-EFArduinoFSK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EFArduinoFSK_Example.release.xcconfig"; sourceTree = "<group>"; };
+		9D7923EB3C2415435F8BA46278A0D7F5 /* Pods-EFArduinoFSK_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EFArduinoFSK_Tests-resources.sh"; sourceTree = "<group>"; };
+		9E7D7C149A5577723F0F34C4AC8E4F9C /* Pods-EFArduinoFSK_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EFArduinoFSK_Tests-umbrella.h"; sourceTree = "<group>"; };
+		AA2C93D26180714B6BD0F818838B27DE /* AudioSignalAnalyzer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AudioSignalAnalyzer.h; sourceTree = "<group>"; };
+		AE3B466B7B5E776DF8BFF54EF8237EBD /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/AudioToolbox.framework; sourceTree = DEVELOPER_DIR; };
+		BB3D360A73370ACCA4020789101AD412 /* lockfree.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = lockfree.h; sourceTree = "<group>"; };
+		C00F6ABC3102DD69194147284EFD5804 /* FSKModemConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FSKModemConfig.h; sourceTree = "<group>"; };
+		CB2CCAE8C97AE8EC104EE79BE0177CE4 /* MultiDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MultiDelegate.m; sourceTree = "<group>"; };
+		CF8ACD7A9B561AEC4D43C46F4997EE9A /* CharReceiver.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CharReceiver.h; sourceTree = "<group>"; };
+		CFC8FF42AAAC486030C69CB0E15FB8BF /* FSKRecognizer.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; path = FSKRecognizer.mm; sourceTree = "<group>"; };
+		D3CAB002AC5461A274F56C355A765E36 /* Pods-EFArduinoFSK_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EFArduinoFSK_Example-umbrella.h"; sourceTree = "<group>"; };
+		D6E3B462C458C028AC8450EB9625AFFF /* Pods-EFArduinoFSK_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EFArduinoFSK_Example-resources.sh"; sourceTree = "<group>"; };
+		DD614341E44075BDF4563440FB549736 /* PatternRecognizer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PatternRecognizer.h; sourceTree = "<group>"; };
+		E1A5C158335C2ABCB1E1F2269EFE7726 /* AudioQueueObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AudioQueueObject.m; sourceTree = "<group>"; };
+		E5538BD33BB9CE3818F27038EA2B0A46 /* NSString+HexColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSString+HexColor.h"; sourceTree = "<group>"; };
+		F03420BB1ED0E22D5337D898517A04BE /* Pods-EFArduinoFSK_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EFArduinoFSK_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		FAE983BCA30412AF74B8D4524FA0898B /* Pods-EFArduinoFSK_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EFArduinoFSK_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		FFA9647D687AEFE05770872E80F3B084 /* EFArduinoFSK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = EFArduinoFSK.modulemap; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8461FDFF5768C57277A6341ACD248533 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0964DAD6B15B10859DAB597ECCE93432 /* AudioToolbox.framework in Frameworks */,
+				91B89F7ED7A149FA227D9DD2737C9189 /* AVFoundation.framework in Frameworks */,
+				1C574EE552DA8E924927D997608CBCBA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FA2F134EBCF278BB7224B812DC570AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51F1DC65AA0B198CE5147C610B0471CA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B02661C199D521E683669BA35592FE1E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				332E8D4816C9BCE00967A8CDAB2E7DC7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04ED87FCA2A4F9FCA42452691A6BE31E /* EFArduinoFSK */ = {
+			isa = PBXGroup;
+			children = (
+				774934AE52ADB48992979672F1AAAB81 /* EFArduinoFSK */,
+				2972F551431C828D34D481AEA899C136 /* Support Files */,
+			);
+			name = EFArduinoFSK;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		122DA2E5084A4393C29BE363C764795C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A9538DB6BA7C28F99B18B78C1D625FA7 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2972F551431C828D34D481AEA899C136 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FFA9647D687AEFE05770872E80F3B084 /* EFArduinoFSK.modulemap */,
+				64C524B5DA0D709645CFDD2CB7FF9C64 /* EFArduinoFSK.xcconfig */,
+				68404271D944DD603F08DA37C568A672 /* EFArduinoFSK-dummy.m */,
+				34A4C28C02769F3CFD9643D2F3B17D1B /* EFArduinoFSK-prefix.pch */,
+				18E0135ECC46533CE686A2FCA877717F /* EFArduinoFSK-umbrella.h */,
+				0F4CEA67D3BD7689198591D8B4B9469B /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/EFArduinoFSK";
+			sourceTree = "<group>";
+		};
+		59EDF60BC9FCDDD13C838938683FDCF9 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1738BA22F5D24268E68567A2151D4688 /* AudioQueueObject.h */,
+				E1A5C158335C2ABCB1E1F2269EFE7726 /* AudioQueueObject.m */,
+				AA2C93D26180714B6BD0F818838B27DE /* AudioSignalAnalyzer.h */,
+				7AFF02AAB6ED79E18D58FFC72FECEFB8 /* AudioSignalAnalyzer.m */,
+				7C67892FBFF0273D8CDAA6830783EFE0 /* AudioSignalGenerator.h */,
+				15C91141E5F087D3D48E23AAF695D798 /* AudioSignalGenerator.m */,
+				CF8ACD7A9B561AEC4D43C46F4997EE9A /* CharReceiver.h */,
+				108214012D2B9DB8151F5A7FD948A7DB /* FSKByteQueue.h */,
+				C00F6ABC3102DD69194147284EFD5804 /* FSKModemConfig.h */,
+				7A040F3584A2EA4349EBA4EFF7D5D35C /* FSKRecognizer.h */,
+				CFC8FF42AAAC486030C69CB0E15FB8BF /* FSKRecognizer.mm */,
+				488B15E710F0D5D0FB6E6F18D233AF94 /* FSKSerialGenerator.h */,
+				751DDD2DAACDB5B576675FD824E851A4 /* FSKSerialGenerator.mm */,
+				BB3D360A73370ACCA4020789101AD412 /* lockfree.h */,
+				3AB19D7A0A792EEB80A58F3E88CC4CFC /* MultiDelegate.h */,
+				CB2CCAE8C97AE8EC104EE79BE0177CE4 /* MultiDelegate.m */,
+				E5538BD33BB9CE3818F27038EA2B0A46 /* NSString+HexColor.h */,
+				5A2B4FBD236CE2F1BCAF29CAEB402B7A /* NSString+HexColor.m */,
+				DD614341E44075BDF4563440FB549736 /* PatternRecognizer.h */,
+				11AE016A08390AA8FE1D051EE2B3B653 /* UIView+Layout.h */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		6C0F5ADF0C6093E9C5B21531F01615AC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				39191482D315A7FB12194EC02B56F02B /* EFArduinoFSK.framework */,
+				73CF7B00912388D62599B926586E201A /* Pods_EFArduinoFSK_Example.framework */,
+				27B9F9DA5B1CD74905ACBA25945BDE82 /* Pods_EFArduinoFSK_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		774934AE52ADB48992979672F1AAAB81 /* EFArduinoFSK */ = {
+			isa = PBXGroup;
+			children = (
+				59EDF60BC9FCDDD13C838938683FDCF9 /* Classes */,
+			);
+			path = EFArduinoFSK;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				8048E0DC1AA5153A2E7D6F4B291CB6CF /* Development Pods */,
+				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
+				6C0F5ADF0C6093E9C5B21531F01615AC /* Products */,
+				F7678E98CA6872EAF544D488BA62E08A /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8048E0DC1AA5153A2E7D6F4B291CB6CF /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				04ED87FCA2A4F9FCA42452691A6BE31E /* EFArduinoFSK */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		8EE24E2D894073D66BB69A387DD2B39A /* Pods-EFArduinoFSK_Example */ = {
+			isa = PBXGroup;
+			children = (
+				6761FF0F4B64E84586285E39131025EF /* Info.plist */,
+				65011B55E22F3D762484039BF319606E /* Pods-EFArduinoFSK_Example.modulemap */,
+				FAE983BCA30412AF74B8D4524FA0898B /* Pods-EFArduinoFSK_Example-acknowledgements.markdown */,
+				35850EA4851A6F36DF8615325CC56E49 /* Pods-EFArduinoFSK_Example-acknowledgements.plist */,
+				832B415D9086699724CDE36B256A3F01 /* Pods-EFArduinoFSK_Example-dummy.m */,
+				254AE8AFC0F09579179B3C2D41F07C03 /* Pods-EFArduinoFSK_Example-frameworks.sh */,
+				D6E3B462C458C028AC8450EB9625AFFF /* Pods-EFArduinoFSK_Example-resources.sh */,
+				D3CAB002AC5461A274F56C355A765E36 /* Pods-EFArduinoFSK_Example-umbrella.h */,
+				801BCDC033FC1A8A844B50720506D884 /* Pods-EFArduinoFSK_Example.debug.xcconfig */,
+				9BDC3E4F1020C2B178861DB8A14D30C7 /* Pods-EFArduinoFSK_Example.release.xcconfig */,
+			);
+			name = "Pods-EFArduinoFSK_Example";
+			path = "Target Support Files/Pods-EFArduinoFSK_Example";
+			sourceTree = "<group>";
+		};
+		A9538DB6BA7C28F99B18B78C1D625FA7 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				AE3B466B7B5E776DF8BFF54EF8237EBD /* AudioToolbox.framework */,
+				5B61FEBEA91AF176B7DD08922228DA51 /* AVFoundation.framework */,
+				194273A2CAEC094E10E98C21B4466BDE /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		C1E5C2A64CC2E0FA5EB320C591A7BB81 /* Pods-EFArduinoFSK_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				2E725E1A233B07993855D7AA2AD0BB8C /* Info.plist */,
+				885E3C6792DDCC6D0BA115DF7C5A50DF /* Pods-EFArduinoFSK_Tests.modulemap */,
+				94CCD9140F7F069B37D4F2788BDE6A6D /* Pods-EFArduinoFSK_Tests-acknowledgements.markdown */,
+				56C8ED872CFBA3BF22C047C0244F9E87 /* Pods-EFArduinoFSK_Tests-acknowledgements.plist */,
+				927940E06B00F2B960D19EAC1D976655 /* Pods-EFArduinoFSK_Tests-dummy.m */,
+				F03420BB1ED0E22D5337D898517A04BE /* Pods-EFArduinoFSK_Tests-frameworks.sh */,
+				9D7923EB3C2415435F8BA46278A0D7F5 /* Pods-EFArduinoFSK_Tests-resources.sh */,
+				9E7D7C149A5577723F0F34C4AC8E4F9C /* Pods-EFArduinoFSK_Tests-umbrella.h */,
+				41DAA7F4D41CE59A1F12D8B0B5A2DC02 /* Pods-EFArduinoFSK_Tests.debug.xcconfig */,
+				307DBE991C1B0BA2269B9B191F90DFCD /* Pods-EFArduinoFSK_Tests.release.xcconfig */,
+			);
+			name = "Pods-EFArduinoFSK_Tests";
+			path = "Target Support Files/Pods-EFArduinoFSK_Tests";
+			sourceTree = "<group>";
+		};
+		F7678E98CA6872EAF544D488BA62E08A /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8EE24E2D894073D66BB69A387DD2B39A /* Pods-EFArduinoFSK_Example */,
+				C1E5C2A64CC2E0FA5EB320C591A7BB81 /* Pods-EFArduinoFSK_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		5B385567A48CF5380AC61C3EF0AB0683 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BE8722DD66B64E4A0A0E82D6CC63CCD /* Pods-EFArduinoFSK_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DCD162BEA124795C99F5B932C7BC7ED /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F67796C3940966988344FA997DF9C70A /* AudioQueueObject.h in Headers */,
+				E31BF2C152CDC8A24437169C47DDF694 /* AudioSignalAnalyzer.h in Headers */,
+				61D43845473B9CB8FA38404DFCE9971A /* AudioSignalGenerator.h in Headers */,
+				0A4127618FC49A3E9CF836B5384DAF1E /* CharReceiver.h in Headers */,
+				4719E8613143A79C586BE79147A0FA2A /* EFArduinoFSK-umbrella.h in Headers */,
+				DB5157BD8A6411CECBC0A54A6AC5EC3B /* FSKByteQueue.h in Headers */,
+				3FBFA87C512283D825E5A61319F5A062 /* FSKModemConfig.h in Headers */,
+				CB41ADA5C244F05C4691308738C7432D /* FSKRecognizer.h in Headers */,
+				7F0C6943A51FDF61FA4A40A3DBAA43C9 /* FSKSerialGenerator.h in Headers */,
+				E1D77DF6BFC9F2B8CAFB45CFCB3A2C59 /* lockfree.h in Headers */,
+				5E63A5EBCE14C7DD6E825CDEF654CD6B /* MultiDelegate.h in Headers */,
+				0E8B906E686A759B15CE0EF7B1DF0C8E /* NSString+HexColor.h in Headers */,
+				7C67114D28009CB263AAA33B417575D7 /* PatternRecognizer.h in Headers */,
+				07DDD777E49291B7D3BC8492B7F12329 /* UIView+Layout.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9067408DBEB52EDB79EB7FCECAAE56BE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC9132529306D30B121E71CFBFF214B4 /* Pods-EFArduinoFSK_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0FDD778A73F0E67BFB06E7006AF5AFA7 /* EFArduinoFSK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E051247B9C401DD5E1DDB70F4EB771F /* Build configuration list for PBXNativeTarget "EFArduinoFSK" */;
+			buildPhases = (
+				D0CC3BC2A7DE6DFC83AB28F9A33B19C1 /* Sources */,
+				8461FDFF5768C57277A6341ACD248533 /* Frameworks */,
+				5DCD162BEA124795C99F5B932C7BC7ED /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EFArduinoFSK;
+			productName = EFArduinoFSK;
+			productReference = 39191482D315A7FB12194EC02B56F02B /* EFArduinoFSK.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		62E07C4808727ECCBD85030563E513DC /* Pods-EFArduinoFSK_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27AB3FA12561A3F44301F5322E636C84 /* Build configuration list for PBXNativeTarget "Pods-EFArduinoFSK_Example" */;
+			buildPhases = (
+				1890572CF6FA5C47FC50A937405CF658 /* Sources */,
+				B02661C199D521E683669BA35592FE1E /* Frameworks */,
+				5B385567A48CF5380AC61C3EF0AB0683 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				719ACF9FB154EBEF9B2FEC1D193D84F3 /* PBXTargetDependency */,
+			);
+			name = "Pods-EFArduinoFSK_Example";
+			productName = "Pods-EFArduinoFSK_Example";
+			productReference = 73CF7B00912388D62599B926586E201A /* Pods_EFArduinoFSK_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AC2DD1DF4BD8CE6C98B9E42325E6ADCA /* Pods-EFArduinoFSK_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DDDBBACFE87A34A8A03CED804C94674A /* Build configuration list for PBXNativeTarget "Pods-EFArduinoFSK_Tests" */;
+			buildPhases = (
+				75E8E5608C1ECBAA2ABCD830A6C96698 /* Sources */,
+				9FA2F134EBCF278BB7224B812DC570AD /* Frameworks */,
+				9067408DBEB52EDB79EB7FCECAAE56BE /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-EFArduinoFSK_Tests";
+			productName = "Pods-EFArduinoFSK_Tests";
+			productReference = 27B9F9DA5B1CD74905ACBA25945BDE82 /* Pods_EFArduinoFSK_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 6C0F5ADF0C6093E9C5B21531F01615AC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0FDD778A73F0E67BFB06E7006AF5AFA7 /* EFArduinoFSK */,
+				62E07C4808727ECCBD85030563E513DC /* Pods-EFArduinoFSK_Example */,
+				AC2DD1DF4BD8CE6C98B9E42325E6ADCA /* Pods-EFArduinoFSK_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1890572CF6FA5C47FC50A937405CF658 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0434A48204D52B0B2A50F4549A8DF59F /* Pods-EFArduinoFSK_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75E8E5608C1ECBAA2ABCD830A6C96698 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE973C797F46B9D92F27BAD8E0E6A797 /* Pods-EFArduinoFSK_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0CC3BC2A7DE6DFC83AB28F9A33B19C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67D2418F59B7B85E86BFA5546173792B /* AudioQueueObject.m in Sources */,
+				78A9C5702153F7FADE4E694323CC4B1E /* AudioSignalAnalyzer.m in Sources */,
+				06B1C355FA3EB3D9D8E55BF61B6E30A3 /* AudioSignalGenerator.m in Sources */,
+				F4CB948EFDA48B620A9DBCE0987C503B /* EFArduinoFSK-dummy.m in Sources */,
+				E7043177B2CCDEF3806892526E3ABE1F /* FSKRecognizer.mm in Sources */,
+				1277231A5102827B469A3C4FAA9D05D7 /* FSKSerialGenerator.mm in Sources */,
+				D300C0515714EA010863151F4446ED37 /* MultiDelegate.m in Sources */,
+				1EBE1896134DFD4871BCF653A69CD302 /* NSString+HexColor.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		719ACF9FB154EBEF9B2FEC1D193D84F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = EFArduinoFSK;
+			target = 0FDD778A73F0E67BFB06E7006AF5AFA7 /* EFArduinoFSK */;
+			targetProxy = 896509A03C73F477C4136C122B65AE5C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0ACDCBCB0B6796575F46FFA2F5410C6B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		332A029A2DD08809E0277C284513A64D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41DAA7F4D41CE59A1F12D8B0B5A2DC02 /* Pods-EFArduinoFSK_Tests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-EFArduinoFSK_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-EFArduinoFSK_Tests/Pods-EFArduinoFSK_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_EFArduinoFSK_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5556133CBD0FD424ADD4B41F991EE251 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 801BCDC033FC1A8A844B50720506D884 /* Pods-EFArduinoFSK_Example.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-EFArduinoFSK_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-EFArduinoFSK_Example/Pods-EFArduinoFSK_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_EFArduinoFSK_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8CBB7C648D27F5B9590C8BB34EFB5B10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BDC3E4F1020C2B178861DB8A14D30C7 /* Pods-EFArduinoFSK_Example.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-EFArduinoFSK_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-EFArduinoFSK_Example/Pods-EFArduinoFSK_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_EFArduinoFSK_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CA2BBF2EC4FDAB507912F3E4E9B8DE22 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64C524B5DA0D709645CFDD2CB7FF9C64 /* EFArduinoFSK.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/EFArduinoFSK/EFArduinoFSK-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/EFArduinoFSK/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/EFArduinoFSK/EFArduinoFSK.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = EFArduinoFSK;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CC5F30BC1F55C08100C2AA0C9FA3C519 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 307DBE991C1B0BA2269B9B191F90DFCD /* Pods-EFArduinoFSK_Tests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-EFArduinoFSK_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-EFArduinoFSK_Tests/Pods-EFArduinoFSK_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_EFArduinoFSK_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D3E3D092A3FF7311A98E44BBA36FFD12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		E28AE1A0DA191B9CA52F2723034C4433 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64C524B5DA0D709645CFDD2CB7FF9C64 /* EFArduinoFSK.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/EFArduinoFSK/EFArduinoFSK-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/EFArduinoFSK/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/EFArduinoFSK/EFArduinoFSK.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = EFArduinoFSK;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		27AB3FA12561A3F44301F5322E636C84 /* Build configuration list for PBXNativeTarget "Pods-EFArduinoFSK_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5556133CBD0FD424ADD4B41F991EE251 /* Debug */,
+				8CBB7C648D27F5B9590C8BB34EFB5B10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3E3D092A3FF7311A98E44BBA36FFD12 /* Debug */,
+				0ACDCBCB0B6796575F46FFA2F5410C6B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7E051247B9C401DD5E1DDB70F4EB771F /* Build configuration list for PBXNativeTarget "EFArduinoFSK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E28AE1A0DA191B9CA52F2723034C4433 /* Debug */,
+				CA2BBF2EC4FDAB507912F3E4E9B8DE22 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DDDBBACFE87A34A8A03CED804C94674A /* Build configuration list for PBXNativeTarget "Pods-EFArduinoFSK_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				332A029A2DD08809E0277C284513A64D /* Debug */,
+				CC5F30BC1F55C08100C2AA0C9FA3C519 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
