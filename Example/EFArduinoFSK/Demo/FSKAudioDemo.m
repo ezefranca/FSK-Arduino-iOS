@@ -85,7 +85,7 @@
 
 - (void)endInterruptionWithFlags:(NSUInteger)flags
 {
-    NSLog(@"endInterruptionWithFlags: %x",flags);
+    NSLog(@"endInterruptionWithFlags: %lx",(unsigned long)flags);
 }
 
 - (void)signalArduino:(BOOL)on {
