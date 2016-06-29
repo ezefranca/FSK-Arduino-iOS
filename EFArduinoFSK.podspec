@@ -18,7 +18,7 @@ TODO: Add long description of the pod here.
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'ezefranca' => 'ezequiel.ifsp@gmail.com' }
-  s.source           = { :git => 'https://github.com/ezefranca/EFArduinoFSK.git', :branch => 'develop' }
+  s.source           = { :git => 'https://github.com/ezefranca/EFArduinoFSK.git', :tag => '0.0.5' }
   s.social_media_url = 'https://twitter.com/ezefranca'
 
   s.ios.deployment_target = '8.0'
