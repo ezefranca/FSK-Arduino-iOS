@@ -17,9 +17,10 @@
   },
   "social_media_url": "https://twitter.com/ezefranca",
   "platforms": {
-    "ios": null
+    "ios": "7.0"
   },
   "source_files": "EFArduinoFSK/Classes/**/*",
+  "exclude_files": "LICENSE, README.md, EFArduinoFSK-iOS.podspec",
   "requires_arc": false,
   "frameworks": [
     "AudioToolbox",

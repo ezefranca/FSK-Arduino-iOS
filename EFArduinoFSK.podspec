@@ -21,8 +21,9 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/ezefranca/EFArduinoFSK.git', :branch => 'develop' }
   s.social_media_url = 'https://twitter.com/ezefranca'
 
-  s.ios.deployment_target = '7.0'
-  s.platform     = :ios
+  s.ios.deployment_target = '8.0'
+s.platform     = :ios, '7.0' 
+# s.platform     = :ios
   s.source_files = 'EFArduinoFSK/Classes/**/*'
 s.exclude_files = "LICENSE, README.md, EFArduinoFSK-iOS.podspec"
  #s.exclude_files ='EFArduinoFSK/Classes/lockfree.h'	  
