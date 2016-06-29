@@ -7,7 +7,7 @@
 
 Dependencies for iOS Development, using [Sofmodem Arduino library](https://code.google.com/p/arms22/downloads/detail?name=SoftModem-005.zip&can=2&q=), with FSK communication.
 
-[![imagem](https://raw.githubusercontent.com/ezefranca/FSK-Arduino-iOS7/master/FSK-Demo/image.png)](http://ironbark.xtelco.com.au/subjects/DC/lectures/7/)
+[![imagem](https://raw.githubusercontent.com/ezefranca/EFArduinoFSK/master/images/fsk.png)](http://ironbark.xtelco.com.au/subjects/DC/lectures/7/)
 
 ## Example
 
@@ -20,14 +20,23 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 This libraries have a propouse work with an Arduino using a Sofmodem Shield* to communicate with iOS using FSK. Currently, the source code of the SoftModem is not made as a framework. If you want to use SoftModem in your project, you have two ways:
 
 
-## Adding FSK-Arduino-iOS to your project
+## Adding EFArduinoFSK to your project
 
 ### CocoaPods
 
 [CocoaPods](http://cocoapods.org) is the recommended way to add EFArduinoFSK to your project.
 
-1. Add a pod entry for FSK-Arduino-iOS to your Podfile `pod 'EFArduinoFSK', '~> 0.0.2'`
-2. Install the pod(s) by running `pod install`.
+Add a pod entry for EFArduinoFSK to your Podfile 
+
+```ruby
+pod 'EFArduinoFSK', '~> 0.0.2'
+```
+
+Install the pod(s) by running 
+
+```ruby
+pod install
+```
 
 ### Source files
 
@@ -54,16 +63,16 @@ Alternatively you can directly adding source files to your project.
 * MultiDelegate.h
 * MultiDelegate.m
 * PatternRecognizer.h
-``
+```
 
 SoftModem uses the following two framework for audio input and output. Please add them to your project.
 
-![Image](https://raw.githubusercontent.com/ezefranca/FSK-Arduino-iOS7/master/FSK-Demo/FSK-Demo/framework.png)
+![Image](https://raw.githubusercontent.com/ezefranca/EFArduinoFSK/master/images/framework.png)
 
 ```objectivec
 * AudioToolbox.framework
 * AVFoundation.framework
-``
+```
 
 
 Initialization
@@ -79,7 +88,7 @@ AVAudioSessionInterruptionNotification object:nil];
 [session setCategory:AVAudioSessionCategoryPlayAndRecord error:nil];
 [session setCategory:AVAudioSessionCategoryPlayback error:nil];
 [session setActive:YES error:nil];
-``
+```
 
 #### interruption selector method
 
@@ -99,7 +108,7 @@ else if (interuptionType == AVAudioSessionInterruptionTypeEnded)
 [self endInterruption];
 #endif
 }
-``
+```
 
 Next, for analysis of the voice, make instance of class AudioSignalAnalyzer, FSKRecognizer and AudioSignalAnalyzer parses the input waveform from the microphone to detect the falling and rising edge of the waveform. FSKRecognizer restores the data bits based on the results of the analysis of AudioSignalAnalyzer.
 
@@ -108,27 +117,27 @@ recognizer = [[FSKRecognizer alloc] init];
 [recognizer addReceiver:self];
 analyzer = [[AudioSignalAnalyzer alloc] init]; 
 [analyzer addRecognizer:recognizer];
-``
+```
 
 Then create an instance of a class FSKSerialGenerator for sound output. FSKSerialGenerator converts the data bits to audio signal and output.
 
 ```objectivec
 generator = [[FSKSerialGenerator alloc] init]; 
 [generator play];
-``
+```
 #### Receiving
 
 Register the class that implements the CharReceiver protocol to the FSKRecognizer class, and AVAudioSessionDelegate.
 
 ```objectivec
 @interface YourClass : NSObject <AVAudioSessionDelegate, CharReceiver>
-``
+```
 Register FSKRecognizer class at initialization.
 
 ```objectivec
 YourClass *yourClassInstance;
 [recognizer addReceiver: yourClassInstance];
-``
+```
 receivedChar: method is called　when one byte of data is received.
 
 ```objectivec
@@ -136,21 +145,25 @@ receivedChar: method is called　when one byte of data is received.
 {
 // Receive handling
 }
-``
+```
 #### Sending
 
 Sending data is much easier than receiving data. FSKSerialGenerator class's writeByte: method to sends a single byte.
 
 ```objectivec
 [generator writeByte: 0xff];
-``
+```
 
 #### Links and Credits
 
 [arms22](http://arms22.blog91.fc2.com/) - Creator of Softmodem hardware, libraries for Arduino and ARC version lib for iOS.
+
 [Arduino Libraries](https://code.google.com/p/arms22/downloads/detail?name=SoftModem-005.zip&can=2&q=)
+
 [iOS 4/5 ARC version](https://github.com/9labco/IR-Remote)
+
 [FSK Wikipedia](http://en.wikipedia.org/wiki/Frequency-shift_keying)
+
 [FSK Explanation](http://ironbark.xtelco.com.au/subjects/DC/lectures/7/)
 
 
