@@ -1,5 +1,4 @@
 language: objective-c
 before_install:
     - cd Example
-    - pod install
 script: xcodebuild -workspace EFArduinoFSK.xcworkspace -scheme EFArduinoFSK -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
