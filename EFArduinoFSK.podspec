@@ -24,7 +24,8 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '7.0'
   s.platform     = :ios
   s.source_files = 'EFArduinoFSK/Classes/**/*'
- # s.exclude_files ='EFArduinoFSK/Classes/lockfree.h'	  
+s.exclude_files = "LICENSE, README.md, EFArduinoFSK-iOS.podspec"
+ #s.exclude_files ='EFArduinoFSK/Classes/lockfree.h'	  
   s.requires_arc = false
   s.frameworks   = 'AudioToolbox', 'AVFoundation'
 
