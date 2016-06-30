@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'EFArduinoFSK'
-  s.version          = '0.3.0'
-  s.summary          = 'A short description of EFArduinoFSK.'
+  s.version          = '0.5.0'
+  s.summary          = 'FSK Library for iOS interface with Arduino Development.'
   s.description      = <<-DESC
 TODO: Add long description of the pod here.
                        DESC
@@ -24,7 +24,7 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '8.0'
 s.platform     = :ios, '7.0' 
 # s.platform     = :ios
-  s.source_files = 'EFArduinoFSK/Classes/**/*'
+  s.source_files = 'EFArduinoFSK/Classes/**/*.{h,m}'
 s.exclude_files = "LICENSE, README.md, EFArduinoFSK-iOS.podspec"
  #s.exclude_files ='EFArduinoFSK/Classes/lockfree.h'	  
   s.requires_arc = false
