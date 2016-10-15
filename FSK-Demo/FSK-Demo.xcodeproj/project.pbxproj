@@ -1,0 +1,592 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F7C3C39D1903952700B9FFA3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C3C39C1903952700B9FFA3 /* Foundation.framework */; };
+		F7C3C39F1903952700B9FFA3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C3C39E1903952700B9FFA3 /* CoreGraphics.framework */; };
+		F7C3C3A11903952700B9FFA3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C3C3A01903952700B9FFA3 /* UIKit.framework */; };
+		F7C3C3A71903952700B9FFA3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F7C3C3A51903952700B9FFA3 /* InfoPlist.strings */; };
+		F7C3C3A91903952700B9FFA3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C3C3A81903952700B9FFA3 /* main.m */; };
+		F7C3C3AD1903952700B9FFA3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C3C3AC1903952700B9FFA3 /* AppDelegate.m */; };
+		F7C3C3B01903952700B9FFA3 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7C3C3AE1903952700B9FFA3 /* Main_iPhone.storyboard */; };
+		F7C3C3B31903952700B9FFA3 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7C3C3B11903952700B9FFA3 /* Main_iPad.storyboard */; };
+		F7C3C3B61903952700B9FFA3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C3C3B51903952700B9FFA3 /* ViewController.m */; };
+		F7C3C3B81903952700B9FFA3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7C3C3B71903952700B9FFA3 /* Images.xcassets */; };
+		F7C3C3BF1903952700B9FFA3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C3C3BE1903952700B9FFA3 /* XCTest.framework */; };
+		F7C3C3C01903952700B9FFA3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C3C39C1903952700B9FFA3 /* Foundation.framework */; };
+		F7C3C3C11903952700B9FFA3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C3C3A01903952700B9FFA3 /* UIKit.framework */; };
+		F7C3C3C91903952700B9FFA3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F7C3C3C71903952700B9FFA3 /* InfoPlist.strings */; };
+		F7C3C3CB1903952700B9FFA3 /* FSK_DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C3C3CA1903952700B9FFA3 /* FSK_DemoTests.m */; };
+		F7C3C3EB1903956300B9FFA3 /* NSString+HexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C3C3D71903956300B9FFA3 /* NSString+HexColor.m */; };
+		F7C3C3EC1903956300B9FFA3 /* AudioQueueObject.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C3C3DB1903956300B9FFA3 /* AudioQueueObject.m */; };
+		F7C3C3ED1903956300B9FFA3 /* AudioSignalAnalyzer.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C3C3DD1903956300B9FFA3 /* AudioSignalAnalyzer.m */; };
+		F7C3C3EE1903956300B9FFA3 /* AudioSignalGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C3C3DF1903956300B9FFA3 /* AudioSignalGenerator.m */; };
+		F7C3C3EF1903956300B9FFA3 /* FSKRecognizer.mm in Sources */ = {isa = PBXBuildFile; fileRef = F7C3C3E41903956300B9FFA3 /* FSKRecognizer.mm */; };
+		F7C3C3F01903956300B9FFA3 /* FSKSerialGenerator.mm in Sources */ = {isa = PBXBuildFile; fileRef = F7C3C3E61903956300B9FFA3 /* FSKSerialGenerator.mm */; };
+		F7C3C3F11903956300B9FFA3 /* MultiDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C3C3E91903956300B9FFA3 /* MultiDelegate.m */; };
+		F7C3C3F4190395C800B9FFA3 /* AudioDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C3C3F3190395C800B9FFA3 /* AudioDemo.m */; };
+		F7C3C3F819039C6F00B9FFA3 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C3C3F519039C6F00B9FFA3 /* AudioToolbox.framework */; };
+		F7C3C3FA19039C6F00B9FFA3 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C3C3F719039C6F00B9FFA3 /* CoreAudio.framework */; };
+		F7C3C40D1904306300B9FFA3 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C3C40C1904306300B9FFA3 /* AVFoundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F7C3C3C21903952700B9FFA3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7C3C3911903952600B9FFA3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F7C3C3981903952700B9FFA3;
+			remoteInfo = "FSK-Demo";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F7C3C3991903952700B9FFA3 /* FSK-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FSK-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7C3C39C1903952700B9FFA3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F7C3C39E1903952700B9FFA3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F7C3C3A01903952700B9FFA3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F7C3C3A41903952700B9FFA3 /* FSK-Demo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FSK-Demo-Info.plist"; sourceTree = "<group>"; };
+		F7C3C3A61903952700B9FFA3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F7C3C3A81903952700B9FFA3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F7C3C3AA1903952700B9FFA3 /* FSK-Demo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FSK-Demo-Prefix.pch"; sourceTree = "<group>"; };
+		F7C3C3AB1903952700B9FFA3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F7C3C3AC1903952700B9FFA3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F7C3C3AF1903952700B9FFA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		F7C3C3B21903952700B9FFA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		F7C3C3B41903952700B9FFA3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F7C3C3B51903952700B9FFA3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F7C3C3B71903952700B9FFA3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F7C3C3BD1903952700B9FFA3 /* FSK-DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FSK-DemoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7C3C3BE1903952700B9FFA3 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		F7C3C3C61903952700B9FFA3 /* FSK-DemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FSK-DemoTests-Info.plist"; sourceTree = "<group>"; };
+		F7C3C3C81903952700B9FFA3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F7C3C3CA1903952700B9FFA3 /* FSK_DemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSK_DemoTests.m; sourceTree = "<group>"; };
+		F7C3C3D61903956300B9FFA3 /* NSString+HexColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HexColor.h"; sourceTree = "<group>"; };
+		F7C3C3D71903956300B9FFA3 /* NSString+HexColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HexColor.m"; sourceTree = "<group>"; };
+		F7C3C3D81903956300B9FFA3 /* UIView+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Layout.h"; sourceTree = "<group>"; };
+		F7C3C3DA1903956300B9FFA3 /* AudioQueueObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioQueueObject.h; sourceTree = "<group>"; };
+		F7C3C3DB1903956300B9FFA3 /* AudioQueueObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioQueueObject.m; sourceTree = "<group>"; };
+		F7C3C3DC1903956300B9FFA3 /* AudioSignalAnalyzer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioSignalAnalyzer.h; sourceTree = "<group>"; };
+		F7C3C3DD1903956300B9FFA3 /* AudioSignalAnalyzer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioSignalAnalyzer.m; sourceTree = "<group>"; };
+		F7C3C3DE1903956300B9FFA3 /* AudioSignalGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioSignalGenerator.h; sourceTree = "<group>"; };
+		F7C3C3DF1903956300B9FFA3 /* AudioSignalGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioSignalGenerator.m; sourceTree = "<group>"; };
+		F7C3C3E01903956300B9FFA3 /* CharReceiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharReceiver.h; sourceTree = "<group>"; };
+		F7C3C3E11903956300B9FFA3 /* FSKByteQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSKByteQueue.h; sourceTree = "<group>"; };
+		F7C3C3E21903956300B9FFA3 /* FSKModemConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSKModemConfig.h; sourceTree = "<group>"; };
+		F7C3C3E31903956300B9FFA3 /* FSKRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSKRecognizer.h; sourceTree = "<group>"; };
+		F7C3C3E41903956300B9FFA3 /* FSKRecognizer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FSKRecognizer.mm; sourceTree = "<group>"; };
+		F7C3C3E51903956300B9FFA3 /* FSKSerialGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSKSerialGenerator.h; sourceTree = "<group>"; };
+		F7C3C3E61903956300B9FFA3 /* FSKSerialGenerator.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FSKSerialGenerator.mm; sourceTree = "<group>"; };
+		F7C3C3E71903956300B9FFA3 /* lockfree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lockfree.h; sourceTree = "<group>"; };
+		F7C3C3E81903956300B9FFA3 /* MultiDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiDelegate.h; sourceTree = "<group>"; };
+		F7C3C3E91903956300B9FFA3 /* MultiDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiDelegate.m; sourceTree = "<group>"; };
+		F7C3C3EA1903956300B9FFA3 /* PatternRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatternRecognizer.h; sourceTree = "<group>"; };
+		F7C3C3F2190395C800B9FFA3 /* AudioDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioDemo.h; sourceTree = "<group>"; };
+		F7C3C3F3190395C800B9FFA3 /* AudioDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioDemo.m; sourceTree = "<group>"; };
+		F7C3C3F519039C6F00B9FFA3 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		F7C3C3F619039C6F00B9FFA3 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
+		F7C3C3F719039C6F00B9FFA3 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		F7C3C40C1904306300B9FFA3 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F7C3C3961903952700B9FFA3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7C3C40D1904306300B9FFA3 /* AVFoundation.framework in Frameworks */,
+				F7C3C3F819039C6F00B9FFA3 /* AudioToolbox.framework in Frameworks */,
+				F7C3C3FA19039C6F00B9FFA3 /* CoreAudio.framework in Frameworks */,
+				F7C3C39F1903952700B9FFA3 /* CoreGraphics.framework in Frameworks */,
+				F7C3C3A11903952700B9FFA3 /* UIKit.framework in Frameworks */,
+				F7C3C39D1903952700B9FFA3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7C3C3BA1903952700B9FFA3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7C3C3BF1903952700B9FFA3 /* XCTest.framework in Frameworks */,
+				F7C3C3C11903952700B9FFA3 /* UIKit.framework in Frameworks */,
+				F7C3C3C01903952700B9FFA3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F7C3C3901903952600B9FFA3 = {
+			isa = PBXGroup;
+			children = (
+				F7C3C3D41903956300B9FFA3 /* Class */,
+				F7C3C3A21903952700B9FFA3 /* FSK-Demo */,
+				F7C3C3C41903952700B9FFA3 /* FSK-DemoTests */,
+				F7C3C39B1903952700B9FFA3 /* Frameworks */,
+				F7C3C39A1903952700B9FFA3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F7C3C39A1903952700B9FFA3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F7C3C3991903952700B9FFA3 /* FSK-Demo.app */,
+				F7C3C3BD1903952700B9FFA3 /* FSK-DemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F7C3C39B1903952700B9FFA3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F7C3C40C1904306300B9FFA3 /* AVFoundation.framework */,
+				F7C3C3F519039C6F00B9FFA3 /* AudioToolbox.framework */,
+				F7C3C3F619039C6F00B9FFA3 /* AudioUnit.framework */,
+				F7C3C3F719039C6F00B9FFA3 /* CoreAudio.framework */,
+				F7C3C39C1903952700B9FFA3 /* Foundation.framework */,
+				F7C3C39E1903952700B9FFA3 /* CoreGraphics.framework */,
+				F7C3C3A01903952700B9FFA3 /* UIKit.framework */,
+				F7C3C3BE1903952700B9FFA3 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F7C3C3A21903952700B9FFA3 /* FSK-Demo */ = {
+			isa = PBXGroup;
+			children = (
+				F7C3C3AB1903952700B9FFA3 /* AppDelegate.h */,
+				F7C3C3AC1903952700B9FFA3 /* AppDelegate.m */,
+				F7C3C3AE1903952700B9FFA3 /* Main_iPhone.storyboard */,
+				F7C3C3B11903952700B9FFA3 /* Main_iPad.storyboard */,
+				F7C3C3B41903952700B9FFA3 /* ViewController.h */,
+				F7C3C3B51903952700B9FFA3 /* ViewController.m */,
+				F7C3C3F2190395C800B9FFA3 /* AudioDemo.h */,
+				F7C3C3F3190395C800B9FFA3 /* AudioDemo.m */,
+				F7C3C3B71903952700B9FFA3 /* Images.xcassets */,
+				F7C3C3A31903952700B9FFA3 /* Supporting Files */,
+			);
+			path = "FSK-Demo";
+			sourceTree = "<group>";
+		};
+		F7C3C3A31903952700B9FFA3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F7C3C3A41903952700B9FFA3 /* FSK-Demo-Info.plist */,
+				F7C3C3A51903952700B9FFA3 /* InfoPlist.strings */,
+				F7C3C3A81903952700B9FFA3 /* main.m */,
+				F7C3C3AA1903952700B9FFA3 /* FSK-Demo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F7C3C3C41903952700B9FFA3 /* FSK-DemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				F7C3C3CA1903952700B9FFA3 /* FSK_DemoTests.m */,
+				F7C3C3C51903952700B9FFA3 /* Supporting Files */,
+			);
+			path = "FSK-DemoTests";
+			sourceTree = "<group>";
+		};
+		F7C3C3C51903952700B9FFA3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F7C3C3C61903952700B9FFA3 /* FSK-DemoTests-Info.plist */,
+				F7C3C3C71903952700B9FFA3 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F7C3C3D41903956300B9FFA3 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				F7C3C3D51903956300B9FFA3 /* FK */,
+				F7C3C3D91903956300B9FFA3 /* SoftModem */,
+			);
+			name = Class;
+			path = "FSK-Demo/Class";
+			sourceTree = "<group>";
+		};
+		F7C3C3D51903956300B9FFA3 /* FK */ = {
+			isa = PBXGroup;
+			children = (
+				F7C3C3D61903956300B9FFA3 /* NSString+HexColor.h */,
+				F7C3C3D71903956300B9FFA3 /* NSString+HexColor.m */,
+				F7C3C3D81903956300B9FFA3 /* UIView+Layout.h */,
+			);
+			path = FK;
+			sourceTree = "<group>";
+		};
+		F7C3C3D91903956300B9FFA3 /* SoftModem */ = {
+			isa = PBXGroup;
+			children = (
+				F7C3C3DA1903956300B9FFA3 /* AudioQueueObject.h */,
+				F7C3C3DB1903956300B9FFA3 /* AudioQueueObject.m */,
+				F7C3C3DC1903956300B9FFA3 /* AudioSignalAnalyzer.h */,
+				F7C3C3DD1903956300B9FFA3 /* AudioSignalAnalyzer.m */,
+				F7C3C3DE1903956300B9FFA3 /* AudioSignalGenerator.h */,
+				F7C3C3DF1903956300B9FFA3 /* AudioSignalGenerator.m */,
+				F7C3C3E01903956300B9FFA3 /* CharReceiver.h */,
+				F7C3C3E11903956300B9FFA3 /* FSKByteQueue.h */,
+				F7C3C3E21903956300B9FFA3 /* FSKModemConfig.h */,
+				F7C3C3E31903956300B9FFA3 /* FSKRecognizer.h */,
+				F7C3C3E41903956300B9FFA3 /* FSKRecognizer.mm */,
+				F7C3C3E51903956300B9FFA3 /* FSKSerialGenerator.h */,
+				F7C3C3E61903956300B9FFA3 /* FSKSerialGenerator.mm */,
+				F7C3C3E71903956300B9FFA3 /* lockfree.h */,
+				F7C3C3E81903956300B9FFA3 /* MultiDelegate.h */,
+				F7C3C3E91903956300B9FFA3 /* MultiDelegate.m */,
+				F7C3C3EA1903956300B9FFA3 /* PatternRecognizer.h */,
+			);
+			path = SoftModem;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F7C3C3981903952700B9FFA3 /* FSK-Demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7C3C3CE1903952700B9FFA3 /* Build configuration list for PBXNativeTarget "FSK-Demo" */;
+			buildPhases = (
+				F7C3C3951903952700B9FFA3 /* Sources */,
+				F7C3C3961903952700B9FFA3 /* Frameworks */,
+				F7C3C3971903952700B9FFA3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FSK-Demo";
+			productName = "FSK-Demo";
+			productReference = F7C3C3991903952700B9FFA3 /* FSK-Demo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F7C3C3BC1903952700B9FFA3 /* FSK-DemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7C3C3D11903952700B9FFA3 /* Build configuration list for PBXNativeTarget "FSK-DemoTests" */;
+			buildPhases = (
+				F7C3C3B91903952700B9FFA3 /* Sources */,
+				F7C3C3BA1903952700B9FFA3 /* Frameworks */,
+				F7C3C3BB1903952700B9FFA3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F7C3C3C31903952700B9FFA3 /* PBXTargetDependency */,
+			);
+			name = "FSK-DemoTests";
+			productName = "FSK-DemoTests";
+			productReference = F7C3C3BD1903952700B9FFA3 /* FSK-DemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F7C3C3911903952600B9FFA3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Ezequiel Franca dos Santos";
+				TargetAttributes = {
+					F7C3C3BC1903952700B9FFA3 = {
+						TestTargetID = F7C3C3981903952700B9FFA3;
+					};
+				};
+			};
+			buildConfigurationList = F7C3C3941903952600B9FFA3 /* Build configuration list for PBXProject "FSK-Demo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F7C3C3901903952600B9FFA3;
+			productRefGroup = F7C3C39A1903952700B9FFA3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F7C3C3981903952700B9FFA3 /* FSK-Demo */,
+				F7C3C3BC1903952700B9FFA3 /* FSK-DemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F7C3C3971903952700B9FFA3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7C3C3B31903952700B9FFA3 /* Main_iPad.storyboard in Resources */,
+				F7C3C3B81903952700B9FFA3 /* Images.xcassets in Resources */,
+				F7C3C3B01903952700B9FFA3 /* Main_iPhone.storyboard in Resources */,
+				F7C3C3A71903952700B9FFA3 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7C3C3BB1903952700B9FFA3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7C3C3C91903952700B9FFA3 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F7C3C3951903952700B9FFA3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7C3C3F01903956300B9FFA3 /* FSKSerialGenerator.mm in Sources */,
+				F7C3C3B61903952700B9FFA3 /* ViewController.m in Sources */,
+				F7C3C3F11903956300B9FFA3 /* MultiDelegate.m in Sources */,
+				F7C3C3EB1903956300B9FFA3 /* NSString+HexColor.m in Sources */,
+				F7C3C3F4190395C800B9FFA3 /* AudioDemo.m in Sources */,
+				F7C3C3AD1903952700B9FFA3 /* AppDelegate.m in Sources */,
+				F7C3C3A91903952700B9FFA3 /* main.m in Sources */,
+				F7C3C3EF1903956300B9FFA3 /* FSKRecognizer.mm in Sources */,
+				F7C3C3EE1903956300B9FFA3 /* AudioSignalGenerator.m in Sources */,
+				F7C3C3ED1903956300B9FFA3 /* AudioSignalAnalyzer.m in Sources */,
+				F7C3C3EC1903956300B9FFA3 /* AudioQueueObject.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7C3C3B91903952700B9FFA3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7C3C3CB1903952700B9FFA3 /* FSK_DemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F7C3C3C31903952700B9FFA3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F7C3C3981903952700B9FFA3 /* FSK-Demo */;
+			targetProxy = F7C3C3C21903952700B9FFA3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F7C3C3A51903952700B9FFA3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F7C3C3A61903952700B9FFA3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F7C3C3AE1903952700B9FFA3 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F7C3C3AF1903952700B9FFA3 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		F7C3C3B11903952700B9FFA3 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F7C3C3B21903952700B9FFA3 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		F7C3C3C71903952700B9FFA3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F7C3C3C81903952700B9FFA3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F7C3C3CC1903952700B9FFA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F7C3C3CD1903952700B9FFA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F7C3C3CF1903952700B9FFA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FSK-Demo/FSK-Demo-Prefix.pch";
+				INFOPLIST_FILE = "FSK-Demo/FSK-Demo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "0587D4CF-008A-47FB-96DA-2C41ECDD923C";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F7C3C3D01903952700B9FFA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FSK-Demo/FSK-Demo-Prefix.pch";
+				INFOPLIST_FILE = "FSK-Demo/FSK-Demo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "0587D4CF-008A-47FB-96DA-2C41ECDD923C";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		F7C3C3D21903952700B9FFA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FSK-Demo.app/FSK-Demo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FSK-Demo/FSK-Demo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "FSK-DemoTests/FSK-DemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		F7C3C3D31903952700B9FFA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FSK-Demo.app/FSK-Demo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FSK-Demo/FSK-Demo-Prefix.pch";
+				INFOPLIST_FILE = "FSK-DemoTests/FSK-DemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F7C3C3941903952600B9FFA3 /* Build configuration list for PBXProject "FSK-Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7C3C3CC1903952700B9FFA3 /* Debug */,
+				F7C3C3CD1903952700B9FFA3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F7C3C3CE1903952700B9FFA3 /* Build configuration list for PBXNativeTarget "FSK-Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7C3C3CF1903952700B9FFA3 /* Debug */,
+				F7C3C3D01903952700B9FFA3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F7C3C3D11903952700B9FFA3 /* Build configuration list for PBXNativeTarget "FSK-DemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7C3C3D21903952700B9FFA3 /* Debug */,
+				F7C3C3D31903952700B9FFA3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F7C3C3911903952600B9FFA3 /* Project object */;
+}

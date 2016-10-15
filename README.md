@@ -1,42 +1,30 @@
-# EFArduinoFSK
+FSK-Arduino-iOS 
+========
+[![Build Status](http://img.shields.io/travis/ezefranca/FSK-Arduino-iOS.svg?style=flat)](https://travis-ci.org/ezefranca/FSK-Arduino-iOS)
+[![Badge w/ Version](https://cocoapod-badges.herokuapp.com/v/FSK-Arduino-iOS/badge.png)](http://cocoadocs.org/docsets/FSK-Arduino-iOS)
+[![Badge w/ Platform](https://cocoapod-badges.herokuapp.com/p/FSK-Arduino-iOS/badge.svg)](http://cocoadocs.org/docsets/FSK-Arduino-iOS)
+[![wercker status](https://app.wercker.com/status/7d5a33ceed1006aae64e3937f40d2bf1/s "wercker status")](https://app.wercker.com/project/bykey/7d5a33ceed1006aae64e3937f40d2bf1)
 
-[![CI Status](http://img.shields.io/travis/ezefranca/EFArduinoFSK.svg?style=flat)](https://travis-ci.org/ezefranca/EFArduinoFSK)
-[![Version](https://img.shields.io/cocoapods/v/EFArduinoFSK.svg?style=flat)](http://cocoapods.org/pods/EFArduinoFSK)
-[![License](https://img.shields.io/cocoapods/l/EFArduinoFSK.svg?style=flat)](http://cocoapods.org/pods/EFArduinoFSK)
-[![Platform](https://img.shields.io/cocoapods/p/EFArduinoFSK.svg?style=flat)](http://cocoapods.org/pods/EFArduinoFSK)
 
 Dependencies for iOS Development, using [Sofmodem Arduino library](https://code.google.com/p/arms22/downloads/detail?name=SoftModem-005.zip&can=2&q=), with FSK communication.
 
-[![imagem](https://raw.githubusercontent.com/ezefranca/EFArduinoFSK/master/images/fsk.png)](http://ironbark.xtelco.com.au/subjects/DC/lectures/7/)
+[![imagem](https://raw.githubusercontent.com/ezefranca/FSK-Arduino-iOS7/master/FSK-Demo/image.png)](http://ironbark.xtelco.com.au/subjects/DC/lectures/7/)
 
-## Example
+=====
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
-
-## Installation
+How to use
+====
 
 This libraries have a propouse work with an Arduino using a Sofmodem Shield* to communicate with iOS using FSK. Currently, the source code of the SoftModem is not made as a framework. If you want to use SoftModem in your project, you have two ways:
 
-
-## Adding EFArduinoFSK to your project
+## Adding FSK-Arduino-iOS to your project
 
 ### CocoaPods
 
-[CocoaPods](http://cocoapods.org) is the recommended way to add EFArduinoFSK to your project.
+[CocoaPods](http://cocoapods.org) is the recommended way to add FSK-Arduino-iOS to your project.
 
-Add a pod entry for EFArduinoFSK to your Podfile 
-
-```ruby
-pod 'EFArduinoFSK', '~> 0.0.2'
-```
-
-Install the pod(s) by running 
-
-```ruby
-pod install
-```
+1. Add a pod entry for FSK-Arduino-iOS to your Podfile `pod 'FSK-Arduino-iOS', '~> 0.0.2'`
+2. Install the pod(s) by running `pod install`.
 
 ### Source files
 
@@ -67,7 +55,7 @@ Alternatively you can directly adding source files to your project.
 
 SoftModem uses the following two framework for audio input and output. Please add them to your project.
 
-![Image](https://raw.githubusercontent.com/ezefranca/EFArduinoFSK/master/images/framework.png)
+![Image](https://raw.githubusercontent.com/ezefranca/FSK-Arduino-iOS7/master/FSK-Demo/FSK-Demo/framework.png)
 
 ```objectivec
 * AudioToolbox.framework
@@ -90,22 +78,22 @@ AVAudioSessionInterruptionNotification object:nil];
 [session setActive:YES error:nil];
 ```
 
-#### interruption selector method
+interruption selector method
 
 ```objectivec
 - (void) interruption:(NSNotification*)notification
 {
-NSDictionary *interuptionDict = notification.userInfo;
-NSUInteger interuptionType = (NSUInteger)[interuptionDict valueForKey:AVAudioSessionInterruptionTypeKey];
-
-if (interuptionType == AVAudioSessionInterruptionTypeBegan)
-[self beginInterruption];
+    NSDictionary *interuptionDict = notification.userInfo;
+    NSUInteger interuptionType = (NSUInteger)[interuptionDict valueForKey:AVAudioSessionInterruptionTypeKey];
+    
+    if (interuptionType == AVAudioSessionInterruptionTypeBegan)
+        [self beginInterruption];
 #if __CC_PLATFORM_IOS >= 40000
-else if (interuptionType == AVAudioSessionInterruptionTypeEnded)
-[self endInterruptionWithFlags:(NSUInteger)[interuptionDict valueForKey:AVAudioSessionInterruptionOptionKey]];
+    else if (interuptionType == AVAudioSessionInterruptionTypeEnded)
+        [self endInterruptionWithFlags:(NSUInteger)[interuptionDict valueForKey:AVAudioSessionInterruptionOptionKey]];
 #else
-else if (interuptionType == AVAudioSessionInterruptionTypeEnded)
-[self endInterruption];
+    else if (interuptionType == AVAudioSessionInterruptionTypeEnded)
+        [self endInterruption];
 #endif
 }
 ```
@@ -113,25 +101,26 @@ else if (interuptionType == AVAudioSessionInterruptionTypeEnded)
 Next, for analysis of the voice, make instance of class AudioSignalAnalyzer, FSKRecognizer and AudioSignalAnalyzer parses the input waveform from the microphone to detect the falling and rising edge of the waveform. FSKRecognizer restores the data bits based on the results of the analysis of AudioSignalAnalyzer.
 
 ```objectivec
-recognizer = [[FSKRecognizer alloc] init];     
-[recognizer addReceiver:self];
-analyzer = [[AudioSignalAnalyzer alloc] init]; 
-[analyzer addRecognizer:recognizer];
+        recognizer = [[FSKRecognizer alloc] init];     
+        [recognizer addReceiver:self];
+        analyzer = [[AudioSignalAnalyzer alloc] init]; 
+        [analyzer addRecognizer:recognizer];
 ```
 
 Then create an instance of a class FSKSerialGenerator for sound output. FSKSerialGenerator converts the data bits to audio signal and output.
 
 ```objectivec
-generator = [[FSKSerialGenerator alloc] init]; 
-[generator play];
-```
-#### Receiving
+        generator = [[FSKSerialGenerator alloc] init]; 
+        [generator play];
+````
+Receiving
+=====
 
 Register the class that implements the CharReceiver protocol to the FSKRecognizer class, and AVAudioSessionDelegate.
 
 ```objectivec
 @interface YourClass : NSObject <AVAudioSessionDelegate, CharReceiver>
-```
+````
 Register FSKRecognizer class at initialization.
 
 ```objectivec
@@ -143,10 +132,11 @@ receivedChar: method is called　when one byte of data is received.
 ```objectivec
 - (void) receivedChar: (char) input
 {
-// Receive handling
+     // Receive handling
 }
 ```
-#### Sending
+Sending
+=====
 
 Sending data is much easier than receiving data. FSKSerialGenerator class's writeByte: method to sends a single byte.
 
@@ -154,8 +144,8 @@ Sending data is much easier than receiving data. FSKSerialGenerator class's writ
 [generator writeByte: 0xff];
 ```
 
-#### Links and Credits
-
+Links and Credits
+=====
 [arms22](http://arms22.blog91.fc2.com/) - Creator of Softmodem hardware, libraries for Arduino and ARC version lib for iOS.
 
 [Arduino Libraries](https://code.google.com/p/arms22/downloads/detail?name=SoftModem-005.zip&can=2&q=)
@@ -166,9 +156,8 @@ Sending data is much easier than receiving data. FSKSerialGenerator class's writ
 
 [FSK Explanation](http://ironbark.xtelco.com.au/subjects/DC/lectures/7/)
 
-
-## License
-
+License
+=====
 This code is distributed under the terms and conditions of the [MIT license](LICENSE). 
 
 
