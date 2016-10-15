@@ -1,0 +1,7 @@
+skip_tags: true
+install:
+    - ps: cd FSK-Demo
+build_script:
+    - ps: xcodebuild -workspace FSK-Demo.xcworkspace -scheme FSK-Demo -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+test: off
+deploy: off
