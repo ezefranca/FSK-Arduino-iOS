@@ -88,13 +88,13 @@ interruption selector method
     
     if (interuptionType == AVAudioSessionInterruptionTypeBegan)
         [self beginInterruption];
-#if __CC_PLATFORM_IOS >= 40000
+# if __CC_PLATFORM_IOS >= 40000
     else if (interuptionType == AVAudioSessionInterruptionTypeEnded)
         [self endInterruptionWithFlags:(NSUInteger)[interuptionDict valueForKey:AVAudioSessionInterruptionOptionKey]];
-#else
+# else
     else if (interuptionType == AVAudioSessionInterruptionTypeEnded)
         [self endInterruption];
-#endif
+# endif
 }
 ```
 
